@@ -37,7 +37,7 @@ function Naves() {
           year="1984"
           title="FUERZA & MÁQUINAS"
           area="900 M²"
-          img="apolo/img/naves-rojo.jpg"
+          img="apolo/img/naves-rojo.jpg?v=2"
           features={[
             'Maquinaria selectorizada · roja · 80+ unidades',
             'Press banca · inclinado · declinado · 12 estaciones',
@@ -51,7 +51,7 @@ function Naves() {
           year="2008"
           title="POWER & CARDIO"
           area="900 M²"
-          img="apolo/img/zona-pierna.jpg"
+          img="apolo/img/zona-pierna.jpg?v=2"
           features={[
             'Zona específica de pierna · 20+ máquinas',
             'Cardio · cintas · elípticas · remos · stair · 30 unidades',

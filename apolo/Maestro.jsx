@@ -24,7 +24,7 @@ function Maestro() {
         <div style={{ position:'relative' }}>
           <div style={{
             aspectRatio: '4/5',
-            backgroundImage:'url(apolo/img/recepcion.jpg)',
+            backgroundImage:'url(apolo/img/recepcion.jpg?v=2)',
             backgroundSize:'cover', backgroundPosition:'center 30%',
             filter:'grayscale(20%) contrast(1.1) brightness(0.95)',
             border:'1px solid var(--rule)',
