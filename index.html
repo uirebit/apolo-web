@@ -47,6 +47,89 @@
     animation: marquee 40s linear infinite;
     padding-right: 48px;
   }
+
+  /* ─────────────── RESPONSIVE ─────────────── */
+
+  /* Page becomes fluid below the design width */
+  @media (max-width: 1440px) {
+    .page { width: 100%; max-width: 1440px; }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    html { scroll-padding-top: 72px; }
+
+    /* Header: tighter padding, hide the 8-link menu and logo subtext */
+    .page > header { padding: 12px 16px !important; gap: 8px !important; }
+    .nav-menu-desktop { display: none !important; }
+    .nav-logo-sub { display: none !important; }
+    .nav-cta { padding: 10px 14px !important; font-size: 10px !important; letter-spacing: 0.16em !important; }
+    .nav-tel { font-size: 9px !important; }
+
+    /* Section padding */
+    .page > section, .page > footer {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    #maestro, #naves, #maquinas, #pilates, #planes, #horario {
+      padding-top: 72px !important;
+      padding-bottom: 72px !important;
+    }
+    #contacto { padding-top: 56px !important; padding-bottom: 24px !important; }
+
+    /* Hero: collapse the inner grid + adjust aside */
+    #inicio > div[style*="grid-template-columns"] {
+      padding: 28px 20px 32px !important;
+      gap: 32px !important;
+      min-height: 0 !important;
+    }
+    #inicio aside {
+      border-left: none !important;
+      border-top: 1px solid var(--rule) !important;
+      padding-left: 0 !important;
+      padding-top: 28px !important;
+    }
+    .hero-greek-label { display: none !important; }
+
+    /* Stack top-level section grids to 1 col */
+    .page section > div[style*="grid-template-columns"],
+    .page footer > div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+
+    /* Maestro: paragraphs + achievements (4 cols → 2) */
+    #maestro div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+    #maestro div[style*="repeat(4"] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Maquinas: categories 4 cols → 2 cols */
+    #maquinas div[style*="repeat(4"] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Naves address strip: stack vertically */
+    #naves > div[style*="space-between"][style*="border:"] {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 10px !important;
+    }
+
+    /* Footer 4-col block → stacked */
+    #contacto > div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+    /* Footer wordmark + logo */
+    #contacto svg { width: clamp(64px, 18vw, 140px) !important; height: clamp(64px, 18vw, 140px) !important; }
+
+    /* Marquee: smaller text */
+    .marquee-track > .anton { font-size: 22px !important; }
+  }
 </style>
 </head>
 <body>

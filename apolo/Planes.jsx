@@ -45,7 +45,7 @@ function Planes() {
       </div>
 
       <h2 className="anton" style={{
-        margin: 0, fontSize: 128, lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
+        margin: 0, fontSize: 'clamp(44px, 11vw, 128px)', lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
         marginBottom: 80,
       }}>
         ELIGE TU<br />
@@ -77,12 +77,12 @@ function Planes() {
               )}
             </div>
             <div className="anton" style={{
-              fontSize: 64, lineHeight: 1, letterSpacing:'-0.01em', textTransform:'uppercase',
+              fontSize: 'clamp(40px, 10vw, 64px)', lineHeight: 1, letterSpacing:'-0.01em', textTransform:'uppercase',
             }}>{p.name}</div>
 
             <div style={{ display:'flex', alignItems:'baseline', gap: 6, marginTop: 22 }}>
               <span className="mono" style={{ fontSize: 16, fontWeight: 700, opacity: 0.7 }}>€</span>
-              <span className="anton" style={{ fontSize: 96, lineHeight: 1, letterSpacing:'-0.02em' }}>{p.price}</span>
+              <span className="anton" style={{ fontSize: 'clamp(56px, 16vw, 96px)', lineHeight: 1, letterSpacing:'-0.02em' }}>{p.price}</span>
               <span className="mono" style={{ fontSize: 12, fontWeight: 700, letterSpacing:'0.2em', opacity: 0.7 }}>{p.period}</span>
             </div>
 

@@ -26,7 +26,7 @@ function Horario() {
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap: 80, alignItems:'start' }}>
         <div>
           <h2 className="anton" style={{
-            margin: 0, fontSize: 80, lineHeight: 0.95, letterSpacing:'-0.015em', textTransform:'uppercase',
+            margin: 0, fontSize: 'clamp(40px, 9vw, 80px)', lineHeight: 0.95, letterSpacing:'-0.015em', textTransform:'uppercase',
           }}>
             HORARIOS<br />
             <span style={{ color:'var(--orange)' }}>DEL TEMPLO.</span>

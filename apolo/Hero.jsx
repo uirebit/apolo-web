@@ -51,7 +51,7 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
           </div>
 
           <h1 className="anton" style={{
-            margin: 0, fontSize: 184, lineHeight: 0.86, letterSpacing:'-0.015em',
+            margin: 0, fontSize: 'clamp(48px, 14vw, 184px)', lineHeight: 0.86, letterSpacing:'-0.015em',
             textTransform:'uppercase',
           }}>
             {a && <div>{a}.</div>}
@@ -59,7 +59,7 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
             {c && (
               <div style={{ color:'var(--orange)', position:'relative' }}>
                 {c}.
-                <span style={{
+                <span className="hero-greek-label" style={{
                   position:'absolute', right: -86, top: 18,
                   fontFamily:"'JetBrains Mono', monospace", fontSize: 11,
                   color:'var(--ink-dim)', letterSpacing:'0.18em', fontWeight: 400,

@@ -11,7 +11,7 @@ function Footer() {
       <div style={{ display:'flex', alignItems:'center', gap: 24, marginBottom: 56 }}>
         <ApoloLogo size={140} color="var(--orange)" label={false} />
         <div className="anton" style={{
-          fontSize: 240, lineHeight: 0.85, letterSpacing:'-0.025em',
+          fontSize: 'clamp(72px, 22vw, 240px)', lineHeight: 0.85, letterSpacing:'-0.025em',
           color:'var(--orange)', textTransform:'uppercase',
         }}>
           APOLO.

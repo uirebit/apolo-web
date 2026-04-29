@@ -53,7 +53,7 @@ function Maestro() {
         {/* Text */}
         <div>
           <h2 className="anton" style={{
-            margin: 0, fontSize: 92, lineHeight: 0.92, letterSpacing:'-0.015em',
+            margin: 0, fontSize: 'clamp(40px, 10vw, 92px)', lineHeight: 0.92, letterSpacing:'-0.015em',
             textTransform:'uppercase',
           }}>
             CUARENTA AÑOS<br />

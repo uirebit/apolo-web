@@ -27,7 +27,7 @@ function Pilates() {
         {/* Left — heading + image */}
         <div>
           <h2 className="anton" style={{
-            margin: 0, fontSize: 116, lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
+            margin: 0, fontSize: 'clamp(42px, 10vw, 116px)', lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
           }}>
             EL OTRO<br />
             <span style={{ color:'var(--orange)' }}>LADO DE LA FUERZA.</span>

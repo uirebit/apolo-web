@@ -27,7 +27,7 @@ function Maquinas() {
 
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto', alignItems:'end', gap: 48, marginBottom: 80 }}>
         <h2 className="anton" style={{
-          margin: 0, fontSize: 128, lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
+          margin: 0, fontSize: 'clamp(44px, 11vw, 128px)', lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
         }}>
           {total}<span style={{ color:'var(--orange)' }}>+</span> MÁQUINAS,<br />
           CERO EXCUSAS.

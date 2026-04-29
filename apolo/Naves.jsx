@@ -19,7 +19,7 @@ function Naves() {
       </div>
 
       <h2 className="anton" style={{
-        margin: 0, fontSize: 128, lineHeight: 0.9, letterSpacing:'-0.015em',
+        margin: 0, fontSize: 'clamp(44px, 11vw, 128px)', lineHeight: 0.9, letterSpacing:'-0.015em',
         textTransform:'uppercase', maxWidth: 1100,
       }}>
         DOS NAVES, UNA<br />
