@@ -21,7 +21,7 @@ function Nav() {
       borderBottom: '1px solid var(--rule)',
     }}>
       <div style={{ display:'flex', alignItems:'center', gap: 14 }}>
-        <ApoloLogo size={48} color="var(--orange)" label={false} />
+        <img src="apolo/img/logo-real-clean.webp" width={48} height={48} alt="Apolo Gimnasio" style={{ display:'block', flexShrink: 0 }} />
         <div style={{ display:'flex', flexDirection:'column', lineHeight: 1 }}>
           <span className="anton" style={{ fontSize: 22, letterSpacing:'0.04em', color:'var(--ink)' }}>APOLO</span>
           <span className="mono nav-logo-sub" style={{ fontSize: 9, letterSpacing:'0.28em', color:'var(--ink-dim)', marginTop: 4 }}>

@@ -9,7 +9,7 @@ function Footer() {
     }}>
       {/* Massive wordmark with logo */}
       <div style={{ display:'flex', alignItems:'center', gap: 24, marginBottom: 56 }}>
-        <ApoloLogo size={140} color="var(--orange)" label={false} />
+        <img src="apolo/img/logo-real-clean.webp" width={140} height={140} alt="Apolo Gimnasio" style={{ display:'block', flexShrink: 0 }} />
         <div className="anton" style={{
           fontSize: 'clamp(72px, 22vw, 240px)', lineHeight: 0.85, letterSpacing:'-0.025em',
           color:'var(--orange)', textTransform:'uppercase',
