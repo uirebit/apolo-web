@@ -2,7 +2,7 @@
 
 function Maestro() {
   return (
-    <section style={{
+    <section id="maestro" style={{
       position:'relative', padding:'140px 56px 140px',
       borderTop:'1px solid var(--rule)',
     }}>

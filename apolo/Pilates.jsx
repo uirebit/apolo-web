@@ -7,7 +7,7 @@ function Pilates() {
   ];
 
   return (
-    <section style={{
+    <section id="pilates" style={{
       background:'var(--bg-2)', padding:'140px 56px 140px',
       borderTop:'1px solid var(--rule)', position:'relative',
     }}>

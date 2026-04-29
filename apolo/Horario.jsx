@@ -12,7 +12,7 @@ function Horario() {
   ];
 
   return (
-    <section style={{ padding:'140px 56px 140px', borderTop:'1px solid var(--rule)' }}>
+    <section id="horario" style={{ padding:'140px 56px 140px', borderTop:'1px solid var(--rule)' }}>
       <div style={{ display:'flex', alignItems:'baseline', gap: 18, marginBottom: 64 }}>
         <span className="mono" style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.3em', fontWeight: 700 }}>
           §07 — HORARIO

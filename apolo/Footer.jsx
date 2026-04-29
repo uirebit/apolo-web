@@ -2,7 +2,7 @@
 
 function Footer() {
   return (
-    <footer style={{
+    <footer id="contacto" style={{
       background:'var(--bg)',
       borderTop:'1px solid var(--rule)',
       padding:'80px 56px 32px',

@@ -6,7 +6,7 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
   const [a, b, c] = [parts[0] || '', parts[1] || '', parts[2] || ''];
 
   return (
-    <section style={{
+    <section id="inicio" style={{
       position:'relative', overflow:'hidden',
       background:'var(--bg)',
       paddingBottom: 0,
