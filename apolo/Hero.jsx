@@ -101,7 +101,7 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
           <DataRow k="01" label="MÁQUINAS" value="180+" sub="DOS NAVES · 1.800 M²" />
           <DataRow k="02" label="DIRECTOR" value="40 AÑOS" sub="MARCOS APOLO · CULTURISMO" />
           <DataRow k="03" label="ABIERTO" value="06—22:30" sub="L A V · S/D 10—13" />
-          <DataRow k="04" label="DESDE" value="€39/MES" sub="SIN MATRÍCULA · SIN PERMANENCIA" hi />
+          <DataRow k="04" label="DESDE" value="€50/MES" sub="SIN MATRÍCULA · SIN PERMANENCIA" hi />
 
           {/* Tag */}
           <div style={{

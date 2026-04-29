@@ -5,7 +5,7 @@ function Planes() {
     {
       tag:'01',
       name:'BASE',
-      price:'39',
+      price:'50',
       period:'/MES',
       desc:'Acceso completo a las dos naves. Sin permanencia.',
       features:['Acceso 06—24h, 365 días','Las dos naves','Vestuarios + sauna','Sin matrícula'],
