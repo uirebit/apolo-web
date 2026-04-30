@@ -37,7 +37,11 @@ function Naves() {
           year="1984"
           title="FUERZA & MÁQUINAS"
           area="900 M²"
-          img="apolo/img/naves-rojo.jpg?v=2"
+          imgs={[
+            'apolo/img/nave-mancuernas.jpg',
+            'apolo/img/naves-rojo.jpg',
+            'apolo/img/cardio.jpg',
+          ]}
           features={[
             'Maquinaria selectorizada · roja · 80+ unidades',
             'Press banca · inclinado · declinado · 12 estaciones',
@@ -51,7 +55,10 @@ function Naves() {
           year="2008"
           title="POWER & CARDIO"
           area="900 M²"
-          img="apolo/img/zona-pierna.jpg?v=2"
+          imgs={[
+            'apolo/img/zona-pierna.jpg',
+            'apolo/img/nave-panoramica.jpg',
+          ]}
           features={[
             'Zona específica de pierna · 20+ máquinas',
             'Cardio · cintas · elípticas · remos · stair · 30 unidades',
@@ -84,22 +91,79 @@ function Naves() {
   );
 }
 
-function NaveCard({ tag, year, title, area, img, features }) {
+function NaveCard({ tag, year, title, area, imgs, features }) {
+  const total = imgs.length;
+  const [idx, setIdx] = React.useState(0);
+  const startX = React.useRef(0);
+  const next = () => setIdx(i => (i + 1) % total);
+  const prev = () => setIdx(i => (i - 1 + total) % total);
+  const onTouchStart = e => { startX.current = e.touches[0].clientX; };
+  const onTouchEnd = e => {
+    const dx = e.changedTouches[0].clientX - startX.current;
+    if (Math.abs(dx) > 40) (dx < 0 ? next : prev)();
+  };
+
+  const arrowStyle = {
+    position:'absolute', top:'50%', transform:'translateY(-50%)', zIndex: 3,
+    width: 40, height: 40,
+    border:'1px solid rgba(245,241,234,0.45)',
+    background:'rgba(20,18,16,0.55)', color:'var(--ink)',
+    fontFamily:"'Anton', sans-serif", fontSize: 22, lineHeight: 1, cursor:'pointer',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    backdropFilter:'blur(4px)',
+  };
+
   return (
     <article style={{
       background:'var(--bg)', border:'1px solid var(--rule)',
     }}>
-      <div style={{
+      <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} style={{
         aspectRatio: '16/10',
-        backgroundImage:`url(${img})`,
-        backgroundSize:'cover', backgroundPosition:'center',
         position:'relative',
+        overflow:'hidden',
+        background:'var(--bg-2)',
       }}>
+        {imgs.map((img, i) => (
+          <div key={img} style={{
+            position:'absolute', inset: 0,
+            backgroundImage:`url(${img})`,
+            backgroundSize:'cover', backgroundPosition:'center',
+            opacity: i === idx ? 1 : 0,
+            transition:'opacity 0.5s ease',
+          }} />
+        ))}
+
         <span style={{
-          position:'absolute', top: 18, left: 18,
+          position:'absolute', top: 18, left: 18, zIndex: 2,
           padding:'6px 10px', background:'var(--orange)', color:'var(--bg)',
           fontFamily:"'JetBrains Mono', monospace", fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
         }}>{tag} · {year}</span>
+
+        <span style={{
+          position:'absolute', top: 18, right: 18, zIndex: 2,
+          padding:'6px 10px', background:'rgba(20,18,16,0.55)', color:'var(--ink)',
+          fontFamily:"'JetBrains Mono', monospace", fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
+          backdropFilter:'blur(4px)',
+        }}>{String(idx+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</span>
+
+        {total > 1 && (
+          <React.Fragment>
+            <button onClick={prev} aria-label="Foto anterior" style={{ ...arrowStyle, left: 14 }}>‹</button>
+            <button onClick={next} aria-label="Foto siguiente" style={{ ...arrowStyle, right: 14 }}>›</button>
+            <div style={{
+              position:'absolute', bottom: 14, left: 0, right: 0, zIndex: 3,
+              display:'flex', justifyContent:'center', gap: 6,
+            }}>
+              {imgs.map((_, i) => (
+                <button key={i} onClick={() => setIdx(i)} aria-label={`Foto ${i+1}`} style={{
+                  width: i === idx ? 28 : 8, height: 4, padding: 0, border:'none',
+                  background: i === idx ? 'var(--orange)' : 'rgba(245,241,234,0.45)',
+                  cursor:'pointer', transition:'all 0.3s ease',
+                }} />
+              ))}
+            </div>
+          </React.Fragment>
+        )}
       </div>
       <div style={{ padding:'30px 32px 32px' }}>
         <div style={{ display:'flex', alignItems:'baseline', justifyContent:'space-between' }}>
