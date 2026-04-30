@@ -150,14 +150,12 @@ Organizar por "salas" o zonas, cada una con foto + párrafo breve:
 - Recepción & Tienda de suplementación.
 - Zona de descanso / sala de espera.
 
-### 5.3 Pilates (mini-sección casi independiente)
-Esta sección merece tratamiento propio porque:
-- Tiene marca propia (Laura Díaz / @pilates_lauradiaz).
-- Horarios específicos y distintos al gimnasio.
-- Público diferente al del powerlifting.
-- Incluye sesiones para embarazadas (servicio nicho).
+### 5.3 Actividades (categoría paraguas)
+Sección que agrupa todas las actividades dirigidas más allá de la sala de fuerza. Pilates ya no tiene página propia; pasa a ser una de las actividades dentro de este apartado. Otras previstas: Body Combat, Salsa (lista completa pendiente de cliente, ver punto 9).
 
-**Tratamiento de marca**: respetar la identidad gráfica de Laura (la del cartel original, foto #12) y enlazar de forma visible a su Instagram (@pilates_lauradiaz). El copy lo redactamos nosotros pero el público objetivo y el tono deben sentirse coherentes con su marca, no con el tono "hierro y sudor" del resto del sitio.
+**Pilates** mantiene su tratamiento más detallado porque ya tiene datos firmes (instructora Laura Díaz / @pilates_lauradiaz, horarios concretos, sesiones para embarazadas martes y jueves a las 12:00). El resto de actividades se muestran como tarjetas con copy mínimo y CTA a "INFO EN RECEPCIÓN" hasta tener datos.
+
+**Tratamiento de marca de Pilates**: respetar la identidad gráfica de Laura (foto #12) y enlazar a @pilates_lauradiaz. El copy lo redactamos nosotros pero el tono debe sentirse coherente con su marca, no con el tono "hierro y sudor" del resto del sitio.
 
 ### 5.4 Cómo llegar / Ubicación
 - Dirección: Gonzalo Chacón 31, Aranjuez.
@@ -168,7 +166,12 @@ Esta sección merece tratamiento propio porque:
 
 ### 5.5 Horarios y tarifas
 - Cuadrante claro de horarios.
-- Tarifas con cuota mensual visible (50 €), con CTA "Infórmate en el centro" para bonos/matrícula.
+- Tarifas en tres duraciones, todas visibles:
+  - **Día suelto**: 7 €
+  - **Quincena (2 semanas)**: 35 €
+  - **Mes completo**: 50 €
+- Sin matrícula, sin permanencia.
+- CTA "Infórmate en el centro" o "Llama 910 945 909" en lugar de botones de "empezar"/"reservar" que no llevan a ninguna acción real.
 - **Importante: no esconder precios.** Reduce fricción y mejora conversión a visita.
 
 ### 5.6 Sobre nosotros / Filosofía
@@ -201,7 +204,7 @@ Esta sección merece tratamiento propio porque:
 
 ## 7. Restricciones y consideraciones técnicas
 
-- **Idiomas**: castellano (principal) e inglés. Toda página y todo bloque de copy se entrega en ambas versiones, con selector de idioma visible. Audiencia EN: turismo de Aranjuez y residentes extranjeros del sur de Madrid.
+- **Idioma**: castellano. La versión inglesa queda descartada por ahora; se podrá retomar como fase 2 si surge la necesidad.
 - **Hosting y stack**: GitHub Pages con dominio propio (a confirmar dominio final por el cliente). Esto implica:
   - Sitio estático, sin backend propio.
   - Formularios de contacto vía servicio externo (Formspree, FormSubmit o similar) o `mailto:` directo.
@@ -228,8 +231,8 @@ Tu trabajo es:
 1. **Fetchear y analizar el diseño existente**. Identifica qué secciones tiene la home, qué decisiones de marca y de UX ha tomado, qué fotos usa y qué estilo visual sigue (tipografía condensed bold, paleta amarillo-negro-blanco, capítulos numerados §01, §02…, tono editorial brutalist).
 2. **Validar coherencia con este brief**. Dime qué partes del diseño actual encajan bien con el brief y qué partes habría que ajustar — pero **sin cuestionar los datos concretos** (cifras, biografía del director, año de fundación). Esos son provisionales y el cliente los validará aparte.
 3. **Identificar elementos funcionales que faltan** y proponer cómo añadirlos manteniendo el estilo: WhatsApp como canal de contacto (número pendiente), mapa embebido de Google Maps en la sección Contacto/Horario, enlace a la ficha de Google Business Profile (URL pendiente), enlaces a Instagram (@theapologym). El feed de Instagram embebido queda descartado (ver punto 7).
-4. **Desarrollar las secciones internas** (MAESTRO, NAVES, MÁQUINAS, PILATES, PLANES, HORARIO, CONTACTO) **manteniendo exactamente el mismo lenguaje visual, tipografía, paleta y tono que la home existente**. No reinventes el sistema de diseño, replícalo.
-5. **Sugerir copy concreto** para cada sección, respetando las frases ya creadas por el gimnasio (especialmente *"Entra como un mortal, sal como Apolo"* — que aún no se ha usado y merece protagonismo en alguna sección interna — y *"Querer y el poder se acorta con el entrenamiento"*) y el tono editorial seco y rotundo del diseño actual ("Hierro. Sudor. Gloria.", "Cuarenta años bajo la barra.", "Dos naves, una sola disciplina.").
+4. **Desarrollar las secciones internas** (MAESTRO, NAVES, MÁQUINAS, ACTIVIDADES, PLANES, HORARIO, CONTACTO) **manteniendo exactamente el mismo lenguaje visual, tipografía, paleta y tono que la home existente**. No reinventes el sistema de diseño, replícalo.
+5. **Sugerir copy concreto en castellano** para cada sección, respetando las frases ya creadas por el gimnasio (especialmente *"Entra como un mortal, sal como Apolo"* — que aún no se ha usado y merece protagonismo en alguna sección interna — y *"Querer y el poder se acorta con el entrenamiento"*) y el tono editorial seco y rotundo del diseño actual ("Hierro. Sudor. Gloria.", "Cuarenta años bajo la barra.", "Dos naves, una sola disciplina.").
 6. **Indicar qué fotos del set adjunto encajan en cada sección** y cuáles convendría que el cliente consiga aún (ver lista de fotos faltantes en el punto 4).
 
 **Reglas importantes**:
@@ -254,3 +257,5 @@ Datos que aún no tengo y que iré pasando a lo largo del proyecto. No bloquean 
 | 7 | Confirmación de Laura Díaz para sección Pilates | Voz, enlaces y posibles fotos propias antes de publicar |
 | 8 | Decisión sobre analítica (Google Analytics, Plausible u otra) | Determinar si hace falta banner de cookies y política de privacidad |
 | 9 | Email de contacto definitivo | Sustituir el `hola@apolostrength.es` actual del footer por el email real |
+| 10 | Lista completa de actividades dirigidas (más allá de Pilates) | Rellenar las tarjetas de la sección ACTIVIDADES con datos reales (Body Combat, Salsa y las que falten) |
+| 11 | Por cada actividad: instructor, horario y observaciones | Sustituir los placeholders "INFO EN RECEPCIÓN" por información concreta |

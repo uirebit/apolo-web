@@ -37,7 +37,7 @@ function Footer() {
         </div>
 
         {[
-          ['VISITAR',['Inicio','El maestro','Las naves','Inventario','Pilates','Planes','Horario']],
+          ['VISITAR',['Inicio','El maestro','Las naves','Inventario','Actividades','Planes','Horario']],
           ['LEGAL',['Aviso legal','Privacidad','Cookies','Reglamento']],
           ['SOCIAL',['@theapologym','@gym_apolo_powerlifting','@pilates_lauradiaz','TikTok','YouTube']],
         ].map(([title, items]) => (

@@ -4,28 +4,28 @@ function Planes() {
   const plans = [
     {
       tag:'01',
-      name:'BASE',
-      price:'50',
-      period:'/MES',
-      desc:'Acceso completo a las dos naves. Sin permanencia.',
-      features:['Acceso 06—24h, 365 días','Las dos naves','Vestuarios + sauna','Sin matrícula'],
+      name:'DÍA',
+      price:'7',
+      period:'/DÍA',
+      desc:'Una visita suelta. Para probar el sitio sin compromiso.',
+      features:['Acceso completo a las dos naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
     },
     {
       tag:'02',
-      name:'TEMPLO',
-      price:'69',
-      period:'/MES',
-      desc:'Para quien viene a por algo concreto. Con seguimiento.',
-      features:['Todo lo de BASE','Plan personalizado mensual','Revisión técnica con Marcos · 1×mes','Reserva de jaula olímpica','Análisis de composición corporal'],
-      hi: true,
+      name:'QUINCENA',
+      price:'35',
+      period:'/2 SEMANAS',
+      desc:'Catorce días seguidos. Para una temporada concreta.',
+      features:['Acceso completo a las dos naves','Vestuarios + sauna','14 días naturales','Sin matrícula'],
     },
     {
       tag:'03',
-      name:'COMPETICIÓN',
-      price:'129',
+      name:'MES',
+      price:'50',
       period:'/MES',
-      desc:'Preparación para competir. Powerlifting, culturismo o strongman.',
-      features:['Todo lo de TEMPLO','Coaching semanal 1:1','Programación de competición','Pruebas técnicas · vídeo','Soporte nutricional'],
+      desc:'Mes completo. La cuota habitual de los socios.',
+      features:['Acceso completo a las dos naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
+      hi: true,
     },
   ];
 
@@ -48,8 +48,8 @@ function Planes() {
         margin: 0, fontSize: 'clamp(44px, 11vw, 128px)', lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
         marginBottom: 80,
       }}>
-        ELIGE TU<br />
-        <span style={{ color:'var(--orange)' }}>NIVEL DE FUEGO.</span>
+        TRES TARIFAS.<br />
+        <span style={{ color:'var(--orange)' }}>CERO LETRA PEQUEÑA.</span>
       </h2>
 
       <div style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap: 18 }}>
@@ -73,7 +73,7 @@ function Planes() {
                   fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
                   background:'var(--bg)', color:'var(--orange)',
                   padding:'5px 9px',
-                }}>★ ELEGIDO</span>
+                }}>★ HABITUAL</span>
               )}
             </div>
             <div className="anton" style={{
@@ -110,26 +110,16 @@ function Planes() {
                 </li>
               ))}
             </ul>
-
-            <button style={{
-              marginTop: 36, width:'100%',
-              background: p.hi ? 'var(--bg)' : 'transparent',
-              color: p.hi ? 'var(--orange)' : 'var(--ink)',
-              border: p.hi ? 'none' : '1px solid rgba(245,241,234,0.35)',
-              padding:'18px 0',
-              fontFamily:"'Archivo'", fontWeight: 900, fontSize: 12, letterSpacing:'0.22em',
-              cursor:'pointer',
-            }}>EMPEZAR →</button>
           </article>
         ))}
       </div>
 
       <div style={{
-        marginTop: 32,
+        marginTop: 56,
         textAlign:'center',
-        fontSize: 12, color:'var(--ink-dim)', letterSpacing:'0.18em',
+        fontSize: 12, color:'var(--ink-dim)', letterSpacing:'0.22em',
       }} className="mono">
-        ¿DUDAS? · LLAMA AL 910 945 909 · O PÁSATE POR LA NAVE I, MARCOS RESUELVE
+        ALTAS PRESENCIALES EN LA NAVE I · <a href="tel:+34910945909" style={{ color:'var(--orange)', fontWeight: 700, textDecoration:'none' }}>910 945 909</a>
       </div>
     </section>
   );

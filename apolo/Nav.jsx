@@ -6,11 +6,12 @@ function Nav() {
     ['MAESTRO','#maestro'],
     ['NAVES','#naves'],
     ['MÁQUINAS','#maquinas'],
-    ['PILATES','#pilates'],
+    ['ACTIVIDADES','#actividades'],
     ['PLANES','#planes'],
     ['HORARIO','#horario'],
     ['CONTACTO','#contacto'],
   ];
+  const mapsUrl = 'https://maps.google.com/?q=Calle+Gonzalo+Chac%C3%B3n+31+28300+Aranjuez';
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 50,
@@ -41,7 +42,7 @@ function Nav() {
 
       <div style={{ display:'flex', alignItems:'center', gap: 14 }}>
         <a href="tel:+34910945909" className="mono nav-tel" style={{ fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.18em' }}>910 945 909</a>
-        <a href="#planes" className="nav-cta" style={{
+        <a href={mapsUrl} target="_blank" rel="noopener" className="nav-cta" style={{
           background:'var(--orange)', color:'var(--bg)',
           padding:'12px 22px', fontWeight: 900, fontSize: 11, letterSpacing:'0.2em',
           cursor:'pointer', display:'inline-block', whiteSpace:'nowrap',

@@ -96,19 +96,21 @@ function Horario() {
             </span>
           </div>
 
-          {/* Pilates note */}
+          {/* Actividades dirigidas */}
           <div style={{
             marginTop: 28, padding:'18px 20px',
             background:'var(--bg-2)', border:'1px solid var(--rule)',
             maxWidth: 480,
           }}>
             <div className="mono" style={{ fontSize: 10, color:'var(--orange)', letterSpacing:'0.28em', fontWeight: 700, marginBottom: 8 }}>
-              CLASES DE PILATES
+              ACTIVIDADES DIRIGIDAS
             </div>
             <div style={{ fontSize: 13.5, color:'var(--ink-mute)', lineHeight: 1.55 }}>
-              Lunes, miércoles, viernes 10:00 / 11:00 / 12:00 H · martes y jueves 09:00—21:00 H ·
-              clase de embarazadas martes/jueves a las 12:00 H. Imparte
-              <span style={{ color:'var(--ink)', fontWeight: 700 }}> Laura Díaz</span>.
+              Pilates con
+              <span style={{ color:'var(--ink)', fontWeight: 700 }}> Laura Díaz</span>:
+              L y X 17—21 H · M y J 09—13 / 17—21 H · plazas extra L y V 10—13 H ·
+              embarazadas M y J a las 12 H. Body Combat, Salsa y otras: horarios en
+              <a href="#actividades" style={{ color:'var(--orange)', fontWeight: 700, marginLeft: 4 }}>recepción</a>.
             </div>
           </div>
         </div>
