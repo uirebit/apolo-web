@@ -6,6 +6,7 @@ function ApoloLanding() {
       <Nav />
       <Hero headline="HIERRO. SUDOR. GLORIA." />
       <Marquee />
+      <Manifiesto />
       <Maestro />
       <Naves />
       <Maquinas />
