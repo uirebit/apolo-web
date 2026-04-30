@@ -128,8 +128,10 @@ Hay 17 fotos adjuntas. Inventario y uso recomendado de cada una:
 
 ## 5. Estructura de la web propuesta
 
+> **Nota sobre la estructura**: los apartados 5.1–5.8 describen la arquitectura *conceptual* de contenidos. El mapeo a las páginas reales del sitio sigue el menú ya cerrado en el punto 8 (**INICIO · MAESTRO · NAVES · MÁQUINAS · PILATES · PLANES · HORARIO · CONTACTO**). En concreto: "Instalaciones" (5.2) se reparte entre **NAVES** y **MÁQUINAS**; "Sobre nosotros / Filosofía" (5.6) corresponde a **MAESTRO**; "Cómo llegar" (5.4) y "Horarios y tarifas" (5.5) se distribuyen entre **HORARIO**, **PLANES** y **CONTACTO**. No crear páginas nuevas fuera de ese menú.
+
 ### 5.1 Home
-1. **Hero**: foto panorámica de las naves (foto #10 o #14) con overlay oscuro + titular *"Entra como un mortal, sal como Apolo"* + subtitular del tipo *"El gimnasio más grande del sur de Madrid. Templo del powerlifting y la fuerza desde [año]."* + CTA primario "Cómo llegar" + CTA secundario "Ver instalaciones".
+1. **Hero**: foto panorámica de las naves (foto #10 o #14) con overlay oscuro + titular *"Entra como un mortal, sal como Apolo"* + subtitular del tipo *"El gimnasio más grande del sur de Madrid. Templo del powerlifting y la fuerza desde 1984."* + CTA primario "Cómo llegar" + CTA secundario "Ver instalaciones".
 2. **Triple bloque de propuesta de valor**:
    - El más grande del sur de Madrid (dos naves).
    - Templo del powerlifting y entrenamiento de fuerza.
@@ -155,6 +157,8 @@ Esta sección merece tratamiento propio porque:
 - Público diferente al del powerlifting.
 - Incluye sesiones para embarazadas (servicio nicho).
 
+**Tratamiento de marca**: respetar la identidad gráfica de Laura (la del cartel original, foto #12) y enlazar de forma visible a su Instagram (@pilates_lauradiaz). El copy lo redactamos nosotros pero el público objetivo y el tono deben sentirse coherentes con su marca, no con el tono "hierro y sudor" del resto del sitio.
+
 ### 5.4 Cómo llegar / Ubicación
 - Dirección: Gonzalo Chacón 31, Aranjuez.
 - Mapa embebido (Google Maps).
@@ -164,7 +168,7 @@ Esta sección merece tratamiento propio porque:
 
 ### 5.5 Horarios y tarifas
 - Cuadrante claro de horarios.
-- Tarifas con cuota mensual visible (30 €), con CTA "Infórmate en el centro" para bonos/matrícula.
+- Tarifas con cuota mensual visible (50 €), con CTA "Infórmate en el centro" para bonos/matrícula.
 - **Importante: no esconder precios.** Reduce fricción y mejora conversión a visita.
 
 ### 5.6 Sobre nosotros / Filosofía
@@ -173,10 +177,10 @@ Esta sección merece tratamiento propio porque:
 - Foto de la estatua dorada como elemento decorativo.
 
 ### 5.7 Contacto
-- Teléfono con click-to-call.
-- WhatsApp directo (clave en sector fitness).
+- Teléfono con click-to-call (910 945 909).
+- WhatsApp directo (clave en sector fitness). **Pendiente de confirmar número**: el 910 945 909 es un fijo y no sirve para WhatsApp; hace falta un móvil dedicado o el del director. Bloqueante para implementar este CTA.
 - Formulario corto.
-- Enlace a Instagram.
+- Enlace a Instagram (@theapologym).
 
 ### 5.8 Secciones de segunda fase (recomendables)
 - Galería extendida.
@@ -197,13 +201,19 @@ Esta sección merece tratamiento propio porque:
 
 ## 7. Restricciones y consideraciones técnicas
 
+- **Idiomas**: castellano (principal) e inglés. Toda página y todo bloque de copy se entrega en ambas versiones, con selector de idioma visible. Audiencia EN: turismo de Aranjuez y residentes extranjeros del sur de Madrid.
+- **Hosting y stack**: GitHub Pages con dominio propio (a confirmar dominio final por el cliente). Esto implica:
+  - Sitio estático, sin backend propio.
+  - Formularios de contacto vía servicio externo (Formspree, FormSubmit o similar) o `mailto:` directo.
+  - Sin sesiones, sin login, sin base de datos.
 - **Mobile-first**: la mayoría del tráfico será móvil (gente buscando "gimnasio cerca de mí"). Diseño y prioridad de contenido pensados primero para móvil.
 - **Velocidad**: relevante para SEO local. Imágenes optimizadas (WebP, lazy loading).
 - **Accesibilidad básica**: contraste correcto en la paleta amarillo/gris (cuidado con amarillo sobre blanco — exige texto grande o complementarlo con gris oscuro).
-- **SEO local**: optimizar para "gimnasio Aranjuez", "gimnasio powerlifting Aranjuez", "gimnasio Gonzalo Chacón", "gimnasio sur de Madrid", y municipios cercanos (Ontígola, Ciempozuelos, Seseña, San Martín de la Vega). Incluir Schema.org de tipo `LocalBusiness > HealthClub` o similar.
+- **SEO local**: optimizar para "gimnasio Aranjuez", "gimnasio powerlifting Aranjuez", "gimnasio Gonzalo Chacón", "gimnasio sur de Madrid", y municipios cercanos (Ontígola, Ciempozuelos, Seseña, San Martín de la Vega). Incluir Schema.org de tipo `LocalBusiness > HealthClub` o similar. Enlazar la ficha de **Google Business Profile** del gimnasio (URL pendiente de cliente) desde la sección de contacto/ubicación: refuerza posicionamiento y canaliza reseñas.
 - **Sin formularios complejos** ni área privada de usuario.
 - **Sin pasarela de pago** ni e-commerce.
-- **Integración Instagram** muy visible (feed activo en home si es posible).
+- **Integración Instagram**: enlace visible a @theapologym desde header/footer y secciones relevantes. **Sin feed embebido** (descartado para evitar dependencia de servicios externos de pago tipo Behold/EmbedSocial sobre un sitio estático). Si en el futuro se quiere feed, evaluar como fase 2.
+- **Cumplimiento RGPD**: aviso de cookies si se añade analítica (Google Analytics, Plausible, etc.) y página de política de privacidad mínima. Necesario en España.
 
 ---
 
@@ -217,7 +227,7 @@ Tu trabajo es:
 
 1. **Fetchear y analizar el diseño existente**. Identifica qué secciones tiene la home, qué decisiones de marca y de UX ha tomado, qué fotos usa y qué estilo visual sigue (tipografía condensed bold, paleta amarillo-negro-blanco, capítulos numerados §01, §02…, tono editorial brutalist).
 2. **Validar coherencia con este brief**. Dime qué partes del diseño actual encajan bien con el brief y qué partes habría que ajustar — pero **sin cuestionar los datos concretos** (cifras, biografía del director, año de fundación). Esos son provisionales y el cliente los validará aparte.
-3. **Identificar elementos funcionales que faltan** y proponer cómo añadirlos manteniendo el estilo: WhatsApp como canal de contacto, mapa embebido de Google Maps en la sección Contacto/Horario, enlaces a Instagram (@theapologym), feed de Instagram embebido si es viable.
+3. **Identificar elementos funcionales que faltan** y proponer cómo añadirlos manteniendo el estilo: WhatsApp como canal de contacto (número pendiente), mapa embebido de Google Maps en la sección Contacto/Horario, enlace a la ficha de Google Business Profile (URL pendiente), enlaces a Instagram (@theapologym). El feed de Instagram embebido queda descartado (ver punto 7).
 4. **Desarrollar las secciones internas** (MAESTRO, NAVES, MÁQUINAS, PILATES, PLANES, HORARIO, CONTACTO) **manteniendo exactamente el mismo lenguaje visual, tipografía, paleta y tono que la home existente**. No reinventes el sistema de diseño, replícalo.
 5. **Sugerir copy concreto** para cada sección, respetando las frases ya creadas por el gimnasio (especialmente *"Entra como un mortal, sal como Apolo"* — que aún no se ha usado y merece protagonismo en alguna sección interna — y *"Querer y el poder se acorta con el entrenamiento"*) y el tono editorial seco y rotundo del diseño actual ("Hierro. Sudor. Gloria.", "Cuarenta años bajo la barra.", "Dos naves, una sola disciplina.").
 6. **Indicar qué fotos del set adjunto encajan en cada sección** y cuáles convendría que el cliente consiga aún (ver lista de fotos faltantes en el punto 4).
@@ -226,3 +236,21 @@ Tu trabajo es:
 - No cuestiones ni cambies los datos heredados del diseño actual (sección "Datos heredados" del punto 2 de este brief).
 - No propongas un rediseño visual. La identidad visual está cerrada.
 - No empieces a generar código de páginas nuevas hasta que validemos juntos los puntos 1–6. Empieza por darme tu lectura del diseño existente y un plan.
+
+---
+
+## 9. Inputs pendientes
+
+Datos que aún no tengo y que iré pasando a lo largo del proyecto. No bloquean el análisis del diseño existente ni el desarrollo de copy y estructura, pero sí ciertas implementaciones concretas.
+
+| # | Pendiente | Necesario para |
+|---|-----------|----------------|
+| 1 | Número de WhatsApp (no vale el fijo 910 945 909) | CTA de WhatsApp en CONTACTO y en el sticky móvil |
+| 2 | URL de la ficha de Google Business Profile | Enlazar reseñas y mapa desde CONTACTO/HORARIO; SEO local |
+| 3 | Dominio definitivo (¿apologym.es u otro?) | `CNAME` en GitHub Pages, Schema.org y `<link rel="canonical">` |
+| 4 | Validación final de cifras y biografía heredadas | Bloquear la versión final del copy |
+| 5 | Confirmación de cuota mensual (50 € o 30 €) | Resolver inconsistencia entre home (50 €) y cartel del local (30 €) |
+| 6 | Fotos faltantes (ver lista en el punto 4) | Exterior, vestuarios, racks cargados, vista cenital |
+| 7 | Confirmación de Laura Díaz para sección Pilates | Voz, enlaces y posibles fotos propias antes de publicar |
+| 8 | Decisión sobre analítica (Google Analytics, Plausible u otra) | Determinar si hace falta banner de cookies y política de privacidad |
+| 9 | Email de contacto definitivo | Sustituir el `hola@apolostrength.es` actual del footer por el email real |

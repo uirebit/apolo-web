@@ -73,7 +73,10 @@ function Naves() {
         <div className="mono" style={{ fontSize: 11, color:'var(--ink-mute)', letterSpacing:'0.25em' }}>
           C/ GONZALO CHACÓN, 31 · 28300 — ARANJUEZ · MADRID
         </div>
-        <a className="mono" style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.25em', fontWeight: 700 }}>
+        <a className="mono"
+          href="https://maps.google.com/?q=Calle+Gonzalo+Chac%C3%B3n+31+28300+Aranjuez"
+          target="_blank" rel="noopener"
+          style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.25em', fontWeight: 700 }}>
           ABRIR EN GOOGLE MAPS →
         </a>
       </div>

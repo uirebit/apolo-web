@@ -1,4 +1,34 @@
 // Horario — real schedule from Instagram
+// L–V 06:00–22:30 · S–D 10:00–13:00
+
+const DIA_NAMES = ['LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO','DOMINGO'];
+// JS getDay(): 0=Sun..6=Sat → reindex to 0=Mon..6=Sun
+const apoloDay = d => (d.getDay() + 6) % 7;
+const dayWindow = i => i < 5 ? [360, 1350] : [600, 780]; // [openMin, closeMin]
+const fmtMin = m => `${String(Math.floor(m/60)).padStart(2,'0')}:${String(m%60).padStart(2,'0')}`;
+
+function getStatus(now) {
+  const day = apoloDay(now);
+  const mins = now.getHours()*60 + now.getMinutes();
+  const [open, close] = dayWindow(day);
+  if (mins >= open && mins < close) {
+    return { open: true, label: `ABIERTO AHORA · CIERRA A LAS ${fmtMin(close)}` };
+  }
+  // Closed: search up to 7 days for next opening
+  let nDay = (mins < open) ? day : (day + 1) % 7;
+  for (let step = 0; step < 7; step++) {
+    const idx = (nDay + step) % 7;
+    const [nOpen] = dayWindow(idx);
+    if (idx === day && step === 0 && mins < open) {
+      return { open: false, label: `CERRADO · ABRE HOY A LAS ${fmtMin(nOpen)}` };
+    }
+    if (step >= 0 && (idx !== day || step > 0)) {
+      const when = (step === 0 && idx === (day + 1) % 7) ? 'MAÑANA' : DIA_NAMES[idx];
+      return { open: false, label: `CERRADO · ABRE ${when} A LAS ${fmtMin(nOpen)}` };
+    }
+  }
+  return { open: false, label: 'CERRADO' };
+}
 
 function Horario() {
   const dias = [
@@ -10,6 +40,15 @@ function Horario() {
     ['SÁBADO',    '10:00 — 13:00', 'NAVE I'],
     ['DOMINGO',   '10:00 — 13:00', 'NAVE I'],
   ];
+
+  const [now, setNow] = React.useState(() => new Date());
+  React.useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(id);
+  }, []);
+
+  const todayIdx = apoloDay(now);
+  const status = getStatus(now);
 
   return (
     <section id="horario" style={{ padding:'140px 56px 140px', borderTop:'1px solid var(--rule)' }}>
@@ -41,14 +80,19 @@ function Horario() {
 
           <div style={{
             marginTop: 40, display:'inline-flex', alignItems:'center', gap: 12,
-            padding:'14px 18px', border:'1px solid var(--orange)',
+            padding:'14px 18px',
+            border: status.open ? '1px solid var(--orange)' : '1px solid var(--rule)',
           }}>
             <span style={{
-              width: 10, height: 10, background:'var(--orange)', borderRadius:'50%',
-              boxShadow:'0 0 0 4px rgba(255,200,30,0.2)',
+              width: 10, height: 10, borderRadius:'50%',
+              background: status.open ? 'var(--orange)' : 'var(--ink-dim)',
+              boxShadow: status.open ? '0 0 0 4px rgba(255,200,30,0.2)' : 'none',
             }} />
-            <span className="mono" style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.22em', fontWeight: 700 }}>
-              ABIERTO AHORA · CIERRA A LAS 22:30
+            <span className="mono" style={{
+              fontSize: 11, letterSpacing:'0.22em', fontWeight: 700,
+              color: status.open ? 'var(--orange)' : 'var(--ink-mute)',
+            }}>
+              {status.label}
             </span>
           </div>
 
@@ -71,7 +115,7 @@ function Horario() {
 
         <div style={{ border:'1px solid var(--rule)' }}>
           {dias.map(([d, h, n], i) => {
-            const isToday = i === 2;
+            const isToday = i === todayIdx;
             return (
               <div key={d} style={{
                 display:'grid', gridTemplateColumns:'1fr 1fr 1fr',

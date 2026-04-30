@@ -4,6 +4,7 @@ function Pilates() {
   const horarios = [
     { dias: 'LUNES Y MIÉRCOLES', horas: ['17:00 — 18:00','18:00 — 19:00','19:00 — 20:00','20:00 — 21:00'] },
     { dias: 'MARTES Y JUEVES',   horas: ['09:00 — 10:00','10:00 — 11:00','11:00 — 12:00','12:00 — 13:00','17:00 — 18:00','18:00 — 19:00','19:00 — 20:00','20:00 — 21:00'], note: 'Sesión 12:00 H reservada para *embarazadas' },
+    { dias: 'PLAZAS EXTRA · LUNES Y VIERNES', horas: ['10:00 — 11:00','11:00 — 12:00','12:00 — 13:00'] },
   ];
 
   return (
@@ -133,12 +134,13 @@ function Pilates() {
             </div>
           ))}
 
-          <button style={{
+          <a href="tel:+34910945909" style={{
             marginTop: 32, width:'100%',
             background:'var(--orange)', border:'none', color:'var(--bg)',
             padding:'18px 0', fontFamily:"'Archivo'", fontWeight: 900,
             fontSize: 12, letterSpacing:'0.22em', cursor:'pointer',
-          }}>RESERVAR PLAZA · 910 945 909 →</button>
+            display:'block', textAlign:'center', textDecoration:'none',
+          }}>RESERVAR PLAZA · 910 945 909 →</a>
         </div>
       </div>
     </section>

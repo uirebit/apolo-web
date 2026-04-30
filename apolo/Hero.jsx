@@ -80,16 +80,17 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
           </p>
 
           <div style={{ marginTop: 44, display:'flex', alignItems:'center', gap: 16 }}>
-            <button style={{
+            <a href="#contacto" style={{
               background:'var(--orange)', border:'none', color:'var(--bg)',
               padding:'18px 30px', fontWeight: 900, fontSize: 12, letterSpacing:'0.22em',
-              cursor:'pointer',
-            }}>RESERVA TU PRIMERA SESIÓN →</button>
-            <button style={{
+              cursor:'pointer', display:'inline-block', textDecoration:'none',
+            }}>CÓMO LLEGAR →</a>
+            <a href="#naves" style={{
               background:'transparent', border:'1px solid rgba(245,241,234,0.35)',
               color:'var(--ink)', padding:'18px 26px',
               fontSize: 12, letterSpacing:'0.22em', fontWeight: 600, cursor:'pointer',
-            }}>VER LAS NAVES</button>
+              display:'inline-block', textDecoration:'none',
+            }}>VER LAS NAVES</a>
           </div>
         </div>
 

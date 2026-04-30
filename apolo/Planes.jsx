@@ -36,7 +36,7 @@ function Planes() {
     }}>
       <div style={{ display:'flex', alignItems:'baseline', gap: 18, marginBottom: 64 }}>
         <span className="mono" style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.3em', fontWeight: 700 }}>
-          §05 — PLANES
+          §06 — PLANES
         </span>
         <span style={{ flex: 1, height: 1, background:'var(--rule)' }} />
         <span className="mono" style={{ fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.25em' }}>
@@ -129,7 +129,7 @@ function Planes() {
         textAlign:'center',
         fontSize: 12, color:'var(--ink-dim)', letterSpacing:'0.18em',
       }} className="mono">
-        ¿DUDAS? · LLAMA AL +34 91 814 00 00 · O PÁSATE POR LA NAVE I, MARCOS RESUELVE
+        ¿DUDAS? · LLAMA AL 910 945 909 · O PÁSATE POR LA NAVE I, MARCOS RESUELVE
       </div>
     </section>
   );
