@@ -114,7 +114,7 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
           }}>
             <span style={{
               width: 8, height: 8, background:'var(--orange)', borderRadius:'50%',
-              boxShadow:'0 0 0 3px rgba(255,200,30,0.2)',
+              boxShadow:'0 0 0 3px rgba(247,167,3,0.2)',
             }} />
             <div className="mono" style={{ fontSize: 10, color:'var(--ink-mute)', letterSpacing:'0.2em', lineHeight: 1.5 }}>
               GONZALO CHACÓN 31<br />

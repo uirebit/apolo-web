@@ -86,7 +86,7 @@ function Horario() {
             <span style={{
               width: 10, height: 10, borderRadius:'50%',
               background: status.open ? 'var(--orange)' : 'var(--ink-dim)',
-              boxShadow: status.open ? '0 0 0 4px rgba(255,200,30,0.2)' : 'none',
+              boxShadow: status.open ? '0 0 0 4px rgba(247,167,3,0.2)' : 'none',
             }} />
             <span className="mono" style={{
               fontSize: 11, letterSpacing:'0.22em', fontWeight: 700,
@@ -123,7 +123,7 @@ function Horario() {
                 display:'grid', gridTemplateColumns:'1fr 1fr 1fr',
                 padding:'22px 26px',
                 borderBottom: i < dias.length-1 ? '1px solid var(--rule)' : 'none',
-                background: isToday ? 'rgba(255,200,30,0.06)' : 'transparent',
+                background: isToday ? 'rgba(247,167,3,0.06)' : 'transparent',
               }}>
                 <span className="anton" style={{
                   fontSize: 22, letterSpacing:'0.02em',

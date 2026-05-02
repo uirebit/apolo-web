@@ -4,7 +4,9 @@
       "Bash(git mv *)",
       "Bash(py --version)",
       "Bash(python -m http.server 8000 --bind 127.0.0.1)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code} %{url_effective}\\\\n\" http://127.0.0.1:8000/ http://127.0.0.1:8000/maquinas.html)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{url_effective}\\\\n\" http://127.0.0.1:8000/ http://127.0.0.1:8000/maquinas.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}  %{url_effective}\\\\n\" http://127.0.0.1:8000/aviso-legal.html http://127.0.0.1:8000/privacidad.html http://127.0.0.1:8000/cookies.html)",
+      "Bash(curl -s http://127.0.0.1:8000/__TRACKED_VAR__)"
     ]
   }
 }

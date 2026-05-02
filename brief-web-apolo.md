@@ -74,7 +74,7 @@ Toda llamada a la acción debe llevar a: visitar el centro, llamar por teléfono
 ## 3. Identidad visual
 
 ### Paleta de colores
-- **Amarillo dorado** — color principal de marca (aprox. `#FFD500`, ajustar al tono exacto del logo).
+- **Amarillo dorado** — color principal de marca: `#F7A703` (muestreado del SVG del logo definitivo).
 - **Gris oscuro / casi negro** — color base.
 - **Blanco** — acentos y rótulos.
 - **Rojo** — toques puntuales en algunos elementos (tapizado de máquinas, etc.), no usar como color de marca.

@@ -5,7 +5,7 @@ function CatalogoPage() {
     <div className="page">
       <Nav linkPrefix="index.html" activeHash="#maquinas" />
       <Catalogo />
-      <Footer />
+      <Footer linkPrefix="index.html" />
     </div>
   );
 }

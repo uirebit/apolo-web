@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8" />
-<title>Catálogo de máquinas — The Apolo Gym</title>
+<title>Aviso legal — The Apolo Gym</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/webp" href="apolo/img/logo-real-clean.webp" />
 <link rel="apple-touch-icon" href="apolo/img/logo-real-clean.webp" />
@@ -39,43 +39,32 @@
   .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
 
   .page { width: 1440px; margin: 0 auto; }
+  @media (max-width: 1440px) { .page { width: 100%; max-width: 1440px; } }
 
-  @media (max-width: 1440px) {
-    .page { width: 100%; max-width: 1440px; }
+  /* Legal prose */
+  .legal-body p { margin: 0 0 14px; }
+  .legal-body p:last-child { margin-bottom: 0; }
+  .legal-body a { color: var(--orange); border-bottom: 1px solid currentColor; }
+  .legal-body strong { color: var(--ink); font-weight: 700; }
+  .legal-list {
+    margin: 0 0 14px; padding: 0 0 0 22px;
+    list-style: square;
   }
-
-  /* Catalog grid: 4 → 3 → 2 → 1 columns */
-  .catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  @media (max-width: 1100px) {
-    .catalog-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 768px) {
-    .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  }
-  @media (max-width: 420px) {
-    .catalog-grid { grid-template-columns: 1fr; }
-  }
+  .legal-list li { margin-bottom: 6px; color: var(--ink-mute); }
+  .legal-list li::marker { color: var(--orange); }
 
   /* Mobile */
   @media (max-width: 768px) {
     html { scroll-padding-top: 72px; }
-
     .page > header { padding: 12px 16px !important; gap: 8px !important; }
     .nav-menu-desktop { display: none !important; }
     .nav-logo-sub { display: none !important; }
     .nav-cta { padding: 10px 14px !important; font-size: 10px !important; letter-spacing: 0.16em !important; }
     .nav-tel { font-size: 9px !important; }
-
     .page > section, .page > footer {
       padding-left: 20px !important;
       padding-right: 20px !important;
     }
-
-    /* Footer 4-col block → stacked */
     #contacto > div[style*="grid-template-columns"] {
       grid-template-columns: 1fr !important;
       gap: 32px !important;
@@ -96,8 +85,7 @@
 <script type="text/babel" src="apolo/Logo.jsx"></script>
 <script type="text/babel" src="apolo/Nav.jsx"></script>
 <script type="text/babel" src="apolo/Footer.jsx"></script>
-<script type="text/babel" src="apolo/Catalogo.jsx"></script>
-<script type="text/babel" src="apolo/CatalogoApp.jsx"></script>
+<script type="text/babel" src="apolo/Legal.jsx"></script>
 
 </body>
 </html>

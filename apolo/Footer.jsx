@@ -1,6 +1,34 @@
 // Footer — real contact info + Apolo logo
+// linkPrefix: prepended to internal anchor hrefs ('#…') so the footer also
+// works on subpages ('' on home, 'index.html' elsewhere).
 
-function Footer() {
+function Footer({ linkPrefix = '' }) {
+  const blocks = [
+    ['VISITAR', [
+      ['Inicio',      '#inicio'],
+      ['Nosotros',    '#nosotros'],
+      ['Las naves',   '#naves'],
+      ['Inventario',  '#maquinas'],
+      ['Actividades', '#actividades'],
+      ['Planes',      '#planes'],
+      ['Horario',     '#horario'],
+    ]],
+    ['LEGAL', [
+      ['Aviso legal', 'aviso-legal.html'],
+      ['Privacidad',  'privacidad.html'],
+      ['Cookies',     'cookies.html'],
+    ]],
+    ['SOCIAL', [
+      ['@theapologym', 'https://instagram.com/theapologym'],
+    ]],
+  ];
+
+  const resolveHref = href => {
+    if (!href) return null;
+    if (href.startsWith('#')) return `${linkPrefix}${href}`;
+    return href;
+  };
+
   return (
     <footer id="contacto" style={{
       background:'var(--bg)',
@@ -31,24 +59,29 @@ function Footer() {
             28300 · Aranjuez · Madrid
           </div>
           <div style={{ marginTop: 20, fontSize: 13.5, color:'var(--ink-mute)' }}>
-            <a style={{ color:'var(--orange)', fontWeight: 700, letterSpacing:'0.06em' }}>910 945 909</a><br />
-            hola@apolostrength.es
+            <a href="tel:+34910945909" style={{ color:'var(--orange)', fontWeight: 700, letterSpacing:'0.06em' }}>910 945 909</a>
           </div>
         </div>
 
-        {[
-          ['VISITAR',['Inicio','Nosotros','Las naves','Inventario','Actividades','Planes','Horario']],
-          ['LEGAL',['Aviso legal','Privacidad','Cookies','Reglamento']],
-          ['SOCIAL',['@theapologym']],
-        ].map(([title, items]) => (
+        {blocks.map(([title, items]) => (
           <div key={title}>
             <div className="mono" style={{ fontSize: 10, color:'var(--orange)', letterSpacing:'0.28em', fontWeight: 700, marginBottom: 16 }}>
               {title}
             </div>
             <ul style={{ listStyle:'none', padding: 0, margin: 0, display:'flex', flexDirection:'column', gap: 10 }}>
-              {items.map(it => (
-                <li key={it} style={{ fontSize: 13.5, color:'var(--ink-mute)' }}>{it}</li>
-              ))}
+              {items.map(([label, rawHref]) => {
+                const href = resolveHref(rawHref);
+                const external = href && href.startsWith('http');
+                return (
+                  <li key={label} style={{ fontSize: 13.5, color:'var(--ink-mute)' }}>
+                    <a href={href}
+                       {...(external ? { target: '_blank', rel: 'noopener' } : {})}
+                       style={{ color:'inherit' }}>
+                      {label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
@@ -70,6 +103,17 @@ function Footer() {
         <span className="mono" style={{ fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.22em' }}>
           ΑΠΟΛΛΩΝ · APOLLON · APOLO
         </span>
+      </div>
+
+      {/* Credit */}
+      <div style={{
+        marginTop: 16, textAlign:'right',
+      }}>
+        <a href="https://ribersistemas.es/" target="_blank" rel="noopener" className="mono" style={{
+          fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.22em',
+        }}>
+          DESARROLLADO POR <span style={{ color:'var(--orange)', fontWeight: 700 }}>RIBER SISTEMAS</span> →
+        </a>
       </div>
     </footer>
   );
