@@ -1,8 +1,8 @@
-// Maestro — Marcos Apolo, the director
+// Nosotros — Chule y Fátima, dirección y entrenamiento personal
 
-function Maestro() {
+function Nosotros() {
   return (
-    <section id="maestro" style={{
+    <section id="nosotros" style={{
       position:'relative', padding:'140px 56px 140px',
       borderTop:'1px solid var(--rule)',
     }}>
@@ -11,11 +11,11 @@ function Maestro() {
         display:'flex', alignItems:'baseline', gap: 18, marginBottom: 64,
       }}>
         <span className="mono" style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.3em', fontWeight: 700 }}>
-          §02 — EL MAESTRO
+          §02 — NOSOTROS
         </span>
         <span style={{ flex: 1, height: 1, background:'var(--rule)' }} />
         <span className="mono" style={{ fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.25em' }}>
-          MARCOS APOLO · DIRECTOR
+          CHULE & FÁTIMA · DIRECCIÓN
         </span>
       </div>
 
@@ -38,14 +38,14 @@ function Maestro() {
           }}>
             <div>
               <div className="mono" style={{ fontSize: 9, color:'var(--orange)', letterSpacing:'0.28em', fontWeight: 700 }}>
-                FIG. 02 — RECEPCIÓN · NAVE I
+                FIG. 02 — RECEPCIÓN · NAVES POLÍGONO
               </div>
               <div className="anton" style={{ fontSize: 22, marginTop: 4, letterSpacing:'0.02em' }}>
                 APOLO GIMNASIO
               </div>
             </div>
             <div className="mono" style={{ fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.22em', textAlign:'right' }}>
-              68 KG → 112 KG<br />1984—2026
+              SAN ANTONIO → POLÍGONO<br />1985—2026
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ function Maestro() {
             margin: 0, fontSize: 'clamp(40px, 10vw, 92px)', lineHeight: 0.92, letterSpacing:'-0.015em',
             textTransform:'uppercase',
           }}>
-            CUARENTA AÑOS<br />
+            CUARENTA Y UN AÑOS<br />
             <span style={{ color:'var(--orange)' }}>BAJO LA BARRA.</span>
           </h2>
 
@@ -64,19 +64,17 @@ function Maestro() {
             display:'grid', gridTemplateColumns:'1fr 1fr', gap: 36, marginTop: 56,
           }}>
             <p style={{ fontSize: 15, lineHeight: 1.65, color:'var(--ink-mute)', margin: 0 }}>
-              Marcos Apolo abrió la primera nave en 1984 con tres bancos olímpicos y
-              una jaula de sentadillas hecha por un soldador de Ocaña. Compitió en
-              culturismo nacional durante dos décadas y dirigió equipos de
-              powerlifting de la Comunidad de Madrid. Hoy, a los 64 años, sigue
-              entrenando seis días a la semana y abriendo el gimnasio cada mañana
-              a las seis.
+              Chule abrió el primer Apolo en 1985, en la calle San Antonio
+              de Aranjuez. Tres bancos olímpicos, una jaula de sentadillas
+              hecha por un soldador de Ocaña y la persiana subida cada
+              mañana. Cuarenta y un años después, sigue subiéndola.
             </p>
             <p style={{ fontSize: 15, lineHeight: 1.65, color:'var(--ink-mute)', margin: 0 }}>
-              Su filosofía es simple: el gimnasio no se reinventa cada año. Lo que
-              funcionaba en el 84 funciona ahora. Hierro, técnica, paciencia y un
-              maestro que mira. Apolo es uno de los pocos lugares en España donde
-              todavía se entrena así. Sin pantallas, sin clases coreografiadas,
-              sin excusas.
+              En 2016 cruzó al polígono y abrió las tres naves que hay
+              hoy: una entera para pierna, las otras dos para fuerza,
+              cardio y máquinas. Lleva el gimnasio junto a su hija
+              Fátima. Los dos entrenan, los dos compiten, y los dos
+              cogen entrenamiento personalizado a quien lo pide.
             </p>
           </div>
 
@@ -87,10 +85,10 @@ function Maestro() {
             border:'1px solid var(--rule)',
           }}>
             {[
-              ['1984','APERTURA · NAVE I'],
-              ['×7','TÍTULOS NACIONALES'],
-              ['1.000+','ATLETAS FORMADOS'],
-              ['2008','APERTURA · NAVE II'],
+              ['1985','SAN ANTONIO · ARANJUEZ'],
+              ['2016','NAVES POLÍGONO'],
+              ['41','AÑOS EN ARANJUEZ'],
+              ['2','ENTRENADORES PERSONALES'],
             ].map(([n,l], i) => (
               <div key={i} style={{
                 padding:'28px 24px',
@@ -116,11 +114,11 @@ function Maestro() {
             </p>
             <footer className="mono" style={{
               fontSize: 10, color:'var(--orange)', letterSpacing:'0.28em', marginTop: 18, fontWeight: 700,
-            }}>— MARCOS APOLO, DIRECTOR</footer>
+            }}>— CHULE, DIRECCIÓN</footer>
           </blockquote>
         </div>
       </div>
     </section>
   );
 }
-window.Maestro = Maestro;
+window.Nosotros = Nosotros;

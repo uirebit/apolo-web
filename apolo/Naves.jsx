@@ -10,7 +10,7 @@ function Naves() {
     }}>
       <div style={{ display:'flex', alignItems:'baseline', gap: 18, marginBottom: 64 }}>
         <span className="mono" style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.3em', fontWeight: 700 }}>
-          §03 — LAS DOS NAVES
+          §03 — LAS TRES NAVES
         </span>
         <span style={{ flex: 1, height: 1, background:'var(--rule)' }} />
         <span className="mono" style={{ fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.25em' }}>
@@ -22,49 +22,64 @@ function Naves() {
         margin: 0, fontSize: 'clamp(44px, 11vw, 128px)', lineHeight: 0.9, letterSpacing:'-0.015em',
         textTransform:'uppercase', maxWidth: 1100,
       }}>
-        DOS NAVES, UNA<br />
+        TRES NAVES, UNA<br />
         <span style={{
           WebkitTextStroke:'2px var(--ink)', color:'transparent',
         }}>SOLA DISCIPLINA.</span>
       </h2>
 
       <div style={{
-        display:'grid', gridTemplateColumns:'1fr 1fr', gap: 24,
+        display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap: 24,
         marginTop: 80,
       }}>
         <NaveCard
           tag="NAVE I"
-          year="1984"
+          year="FUERZA"
           title="FUERZA & MÁQUINAS"
-          area="900 M²"
+          area="700 M²"
           imgs={[
             'apolo/img/nave-mancuernas.jpg',
             'apolo/img/naves-rojo.jpg',
-            'apolo/img/cardio.jpg',
           ]}
           features={[
-            'Maquinaria selectorizada · roja · 80+ unidades',
-            'Press banca · inclinado · declinado · 12 estaciones',
-            'Jaulas olímpicas y power racks',
+            'Barras olímpicas y power racks',
             'Mancuernas hexagonales hasta 70 kg',
-            'Sala de pilates con reformer y trapecio',
+            'Press banca · inclinado · declinado',
+            'Maquinaria selectorizada · 80+ unidades',
+            'Recepción y tienda de suplementación',
           ]}
         />
         <NaveCard
           tag="NAVE II"
-          year="2008"
-          title="POWER & CARDIO"
-          area="900 M²"
+          year="PIERNA"
+          title="100% PIERNA"
+          area="500 M²"
           imgs={[
             'apolo/img/zona-pierna.jpg',
+          ]}
+          features={[
+            'Nave entera dedicada al tren inferior',
+            'Hack squat · prensa · leg press 45º',
+            'Leg curl · leg extension · aductor / abductor',
+            'Sentadilla búlgara y trabajo unilateral',
+            'Plataformas para sentadilla libre',
+          ]}
+        />
+        <NaveCard
+          tag="NAVE III"
+          year="CARDIO"
+          title="CARDIO & DEFINICIÓN"
+          area="600 M²"
+          imgs={[
+            'apolo/img/cardio.jpg',
             'apolo/img/nave-panoramica.jpg',
           ]}
           features={[
-            'Zona específica de pierna · 20+ máquinas',
-            'Cardio · cintas · elípticas · remos · stair · 30 unidades',
-            'Plataformas de tiro y zona de strongman',
+            'Cintas · elípticas · remos · stair · bicicletas',
+            'Máquinas de aislamiento y cable',
+            'Zona de strongman y plataformas de tiro',
+            'Sala de pilates con reformer y trapecio',
             'Vestuarios + duchas + servicios completos',
-            'Tienda de suplementación en recepción',
           ]}
         />
       </div>

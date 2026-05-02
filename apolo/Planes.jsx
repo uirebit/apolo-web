@@ -8,15 +8,15 @@ function Planes() {
       price:'7',
       period:'/DÍA',
       desc:'Una visita suelta. Para probar el sitio sin compromiso.',
-      features:['Acceso completo a las dos naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
+      features:['Acceso completo a las tres naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
     },
     {
       tag:'02',
       name:'QUINCENA',
-      price:'35',
+      price:'30',
       period:'/2 SEMANAS',
       desc:'Catorce días seguidos. Para una temporada concreta.',
-      features:['Acceso completo a las dos naves','Vestuarios + sauna','14 días naturales','Sin matrícula'],
+      features:['Acceso completo a las tres naves','Vestuarios + sauna','14 días naturales','Sin matrícula'],
     },
     {
       tag:'03',
@@ -24,7 +24,7 @@ function Planes() {
       price:'50',
       period:'/MES',
       desc:'Mes completo. La cuota habitual de los socios.',
-      features:['Acceso completo a las dos naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
+      features:['Acceso completo a las tres naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
       hi: true,
     },
   ];
@@ -119,7 +119,7 @@ function Planes() {
         textAlign:'center',
         fontSize: 12, color:'var(--ink-dim)', letterSpacing:'0.22em',
       }} className="mono">
-        ALTAS PRESENCIALES EN LA NAVE I · <a href="tel:+34910945909" style={{ color:'var(--orange)', fontWeight: 700, textDecoration:'none' }}>910 945 909</a>
+        ALTAS PRESENCIALES EN RECEPCIÓN · <a href="tel:+34910945909" style={{ color:'var(--orange)', fontWeight: 700, textDecoration:'none' }}>910 945 909</a>
       </div>
     </section>
   );

@@ -4,9 +4,7 @@
 >
 > **IMPORTANTE — punto de partida**: ya existe un diseño previo de la web publicado en GitHub Pages: **https://uirebit.github.io/apolo-web/**. Ese diseño me gusta y NO quiero rehacerlo desde cero. Tu trabajo es partir de ahí y continuar a partir de él, no proponer una alternativa. Antes de hacer nada, fetchea esa URL (y, si te paso el repo, mira el código). El posicionamiento que ya he elegido en ese diseño es *"Apolo · Strength Co — Aranjuez"*, así que respeta ese tono.
 >
-> **NOTA SOBRE LOS DATOS DEL DISEÑO ACTUAL**: la home actual contiene cifras y biografías concretas (año de fundación 1984, segunda nave 2008, director "Marcos Apolo" de 64 años, 180+ máquinas, 1.800 m², 1.000+ socios, cuota €50/mes, etc.). Algunos de esos datos son provisionales y los validaré o corregiré yo más adelante. **NO los cuestiones, no los cambies por iniciativa propia, no preguntes por ellos en cada respuesta**. Trátalos como dados y construye el resto de la web sobre ellos. Cuando te pase correcciones, las aplicaremos en bloque.
->
-> Hay una posible inconsistencia conocida (la cuota mensual aparece como 30 € en una foto del local y como 50 € en la home actual). Asume el dato del diseño actual (50 €) hasta nueva orden.
+> **NOTA SOBRE LOS DATOS DEL DISEÑO ACTUAL**: la home actual contiene cifras y biografías concretas (180+ máquinas, 1.800 m², 1.000+ socios, cuota €50/mes, etc.). Algunos de esos datos son provisionales y los validaré o corregiré yo más adelante. **NO los cuestiones, no los cambies por iniciativa propia, no preguntes por ellos en cada respuesta**. Trátalos como dados y construye el resto de la web sobre ellos. Cuando te pase correcciones, las aplicaremos en bloque.
 
 ---
 
@@ -28,7 +26,7 @@ Toda llamada a la acción debe llevar a: visitar el centro, llamar por teléfono
 ### Identidad
 - **Nombre**: Apolo Gimnasio (también aparece como "GYM APOLO" o "Gym Apolo Powerlifting").
 - **Especialización**: powerlifting y entrenamiento de fuerza, aunque ofrece servicios completos (cardio, máquinas, Pilates).
-- **Argumento diferencial principal**: es el gimnasio más grande del sur de Madrid (dos naves industriales).
+- **Argumento diferencial principal**: es el gimnasio más grande del sur de Madrid (tres naves industriales, una de ellas dedicada en exclusiva a pierna).
 - **Temática visual**: épica griega/mitológica (Apolo, Hércules en murales, laureles, una estatua dorada de cuerpo musculado en la entrada).
 
 ### Frases de marca ya existentes (¡USAR ESTAS, no inventar otras!)
@@ -39,18 +37,16 @@ Toda llamada a la acción debe llevar a: visitar el centro, llamar por teléfono
 - **Dirección**: Gonzalo Chacón 31, **Aranjuez** (Madrid).
 - **Teléfono**: 910 945 909.
 - **Instagram**: @theapologym.
-- **Cuota mensual**: 50 €, sin matrícula, sin permanencia (según diseño actual de la web; pendiente de validación final por el cliente).
+- **Tarifas**: día suelto 7 €, quincena 30 €, mes 50 €. Sin matrícula, sin permanencia.
 
-### Datos heredados del diseño actual (tratar como dados)
-La home publicada en GitHub Pages contiene los siguientes datos concretos. **Asume todos como ciertos** mientras trabajas en el resto de la web:
-- Fundación: 1984.
-- Segunda nave abierta en 2008.
-- Director: Marcos Apolo, culturista, 64 años, sigue entrenando seis días a la semana y abre el gimnasio cada mañana a las seis.
+### Datos confirmados (tratar como dados)
+- Fundación: 1985, en la calle San Antonio de Aranjuez.
+- Traslado a las naves del polígono: 2016 (hace 10 años).
+- Tres naves industriales: una dedicada en exclusiva a pierna, las otras dos para fuerza, cardio y máquinas.
+- Dirección actual: **Chule** (dueño y fundador) y su hija **Fátima**. Los dos llevan el gimnasio y los dos ofrecen entrenamiento personalizado.
 - Origen: tres bancos olímpicos y una jaula de sentadillas hecha por un soldador de Ocaña.
-- Trayectoria: dos décadas compitiendo en culturismo nacional; dirigió equipos de powerlifting de la Comunidad de Madrid.
-- Cifras: 180+ máquinas, 1.800 m², 1.000+ socios.
-- Filosofía declarada: "el gimnasio no se reinventa cada año. Lo que funcionaba en el 84 funciona ahora. Hierro, técnica, paciencia y un maestro que mira. Sin pantallas, sin clases coreografiadas, sin excusas."
-- Disciplinas mencionadas en el ticker de la home: Strongman, Culturismo, Cardio, Rocoso (sic), 40 años, 180+ máquinas.
+- Cifras: 180+ máquinas, 1.800 m² entre las tres naves, 1.000+ socios.
+- Disciplinas mencionadas en el ticker de la home: Strongman, Culturismo, Cardio, Rocoso (sic), 41 años, 180+ máquinas, tres naves.
 
 ### Horarios del gimnasio
 - Lunes a Viernes: 6:00 — 22:30.
@@ -62,7 +58,7 @@ La home publicada en GitHub Pages contiene los siguientes datos concretos. **Asu
 - Plazas extra: Lunes y Viernes a las 10:00, 11:00 y 12:00.
 
 ### Instalaciones y equipamiento detectados en las fotos
-- Dos naves industriales con techos altos.
+- Tres naves industriales con techos altos (una entera de pierna).
 - Zona de cardio (elípticas Fittech).
 - Zona de peso libre (mancuernas hasta peso alto, barras, racks).
 - Máquinas Nautilus y similares (prensa, leg curl, máquinas de aislamiento).
@@ -108,7 +104,7 @@ Hay 17 fotos adjuntas. Inventario y uso recomendado de cada una:
 | 7 | Cartel oficial de horarios (ya diseñado) | Reproducir en HTML manteniendo estilo, o usar imagen directa |
 | 8 | Foto profesional de instructora con battle ropes | **ÚNICA foto lifestyle profesional**, usar para portada de actividades funcionales o blog |
 | 9 | Logo iluminado en alta resolución | Favicon, branding, cabecera |
-| 10 | Panorámica grande de las dos naves con techo industrial | **⭐ CANDIDATA A HERO IMAGE de la home** |
+| 10 | Panorámica grande de las naves con techo industrial | **⭐ CANDIDATA A HERO IMAGE de la home** |
 | 11 | Cartel "Ampliamos plazas de Pilates" | Sección Pilates |
 | 12 | Horarios oficiales de Pilates con identidad gráfica | Sección Pilates |
 | 13 | Recepción con suplementos y rótulo APOLO blanco | Sección de servicios extra / tienda |
@@ -122,18 +118,18 @@ Hay 17 fotos adjuntas. Inventario y uso recomendado de cada una:
 - Vestuarios y duchas (la gente lo busca y nunca aparece en webs).
 - Entrenadores con buena luz, si los hay en plantilla.
 - Gente entrenando con barras cargadas en racks (refuerza powerlifting).
-- Plano o vista cenital de las dos naves para transmitir escala.
+- Plano o vista cenital de las tres naves para transmitir escala.
 
 ---
 
 ## 5. Estructura de la web propuesta
 
-> **Nota sobre la estructura**: los apartados 5.1–5.8 describen la arquitectura *conceptual* de contenidos. El mapeo a las páginas reales del sitio sigue el menú ya cerrado en el punto 8 (**INICIO · MAESTRO · NAVES · MÁQUINAS · PILATES · PLANES · HORARIO · CONTACTO**). En concreto: "Instalaciones" (5.2) se reparte entre **NAVES** y **MÁQUINAS**; "Sobre nosotros / Filosofía" (5.6) corresponde a **MAESTRO**; "Cómo llegar" (5.4) y "Horarios y tarifas" (5.5) se distribuyen entre **HORARIO**, **PLANES** y **CONTACTO**. No crear páginas nuevas fuera de ese menú.
+> **Nota sobre la estructura**: los apartados 5.1–5.8 describen la arquitectura *conceptual* de contenidos. El mapeo a las páginas reales del sitio sigue el menú ya cerrado en el punto 8 (**INICIO · NOSOTROS · NAVES · MÁQUINAS · ACTIVIDADES · PLANES · HORARIO · CONTACTO**). En concreto: "Instalaciones" (5.2) se reparte entre **NAVES** y **MÁQUINAS**; "Sobre nosotros / Filosofía" (5.6) corresponde a **NOSOTROS**; "Cómo llegar" (5.4) y "Horarios y tarifas" (5.5) se distribuyen entre **HORARIO**, **PLANES** y **CONTACTO**. No crear páginas nuevas fuera de ese menú.
 
 ### 5.1 Home
-1. **Hero**: foto panorámica de las naves (foto #10 o #14) con overlay oscuro + titular *"Entra como un mortal, sal como Apolo"* + subtitular del tipo *"El gimnasio más grande del sur de Madrid. Templo del powerlifting y la fuerza desde 1984."* + CTA primario "Cómo llegar" + CTA secundario "Ver instalaciones".
+1. **Hero**: foto panorámica de las naves (foto #10 o #14) con overlay oscuro + titular *"Entra como un mortal, sal como Apolo"* + subtitular del tipo *"El gimnasio más grande del sur de Madrid. Templo del powerlifting y la fuerza desde 1985."* + CTA primario "Cómo llegar" + CTA secundario "Ver instalaciones".
 2. **Triple bloque de propuesta de valor**:
-   - El más grande del sur de Madrid (dos naves).
+   - El más grande del sur de Madrid (tres naves, una entera de pierna).
    - Templo del powerlifting y entrenamiento de fuerza.
    - Más allá de la fuerza: Pilates, cardio y comunidad.
 3. **Tour por instalaciones**: galería visual con acceso a la sección completa.
@@ -168,7 +164,7 @@ Sección que agrupa todas las actividades dirigidas más allá de la sala de fue
 - Cuadrante claro de horarios.
 - Tarifas en tres duraciones, todas visibles:
   - **Día suelto**: 7 €
-  - **Quincena (2 semanas)**: 35 €
+  - **Quincena (2 semanas)**: 30 €
   - **Mes completo**: 50 €
 - Sin matrícula, sin permanencia.
 - CTA "Infórmate en el centro" o "Llama 910 945 909" en lugar de botones de "empezar"/"reservar" que no llevan a ninguna acción real.
@@ -224,15 +220,15 @@ Sección que agrupa todas las actividades dirigidas más allá de la sala de fue
 
 **Ya existe una home diseñada en https://uirebit.github.io/apolo-web/. NO la reinventes — partimos de ahí.**
 
-El menú actual de la web es: INICIO · MAESTRO · NAVES · MÁQUINAS · PILATES · PLANES · HORARIO · CONTACTO. Hay también un CTA "VEN A ENTRENAR →" en la cabecera.
+El menú actual de la web es: INICIO · NOSOTROS · NAVES · MÁQUINAS · ACTIVIDADES · PLANES · HORARIO · CONTACTO. Hay también un CTA "VEN A ENTRENAR →" en la cabecera.
 
 Tu trabajo es:
 
 1. **Fetchear y analizar el diseño existente**. Identifica qué secciones tiene la home, qué decisiones de marca y de UX ha tomado, qué fotos usa y qué estilo visual sigue (tipografía condensed bold, paleta amarillo-negro-blanco, capítulos numerados §01, §02…, tono editorial brutalist).
 2. **Validar coherencia con este brief**. Dime qué partes del diseño actual encajan bien con el brief y qué partes habría que ajustar — pero **sin cuestionar los datos concretos** (cifras, biografía del director, año de fundación). Esos son provisionales y el cliente los validará aparte.
 3. **Identificar elementos funcionales que faltan** y proponer cómo añadirlos manteniendo el estilo: WhatsApp como canal de contacto (número pendiente), mapa embebido de Google Maps en la sección Contacto/Horario, enlace a la ficha de Google Business Profile (URL pendiente), enlaces a Instagram (@theapologym). El feed de Instagram embebido queda descartado (ver punto 7).
-4. **Desarrollar las secciones internas** (MAESTRO, NAVES, MÁQUINAS, ACTIVIDADES, PLANES, HORARIO, CONTACTO) **manteniendo exactamente el mismo lenguaje visual, tipografía, paleta y tono que la home existente**. No reinventes el sistema de diseño, replícalo.
-5. **Sugerir copy concreto en castellano** para cada sección, respetando las frases ya creadas por el gimnasio (especialmente *"Entra como un mortal, sal como Apolo"* — que aún no se ha usado y merece protagonismo en alguna sección interna — y *"Querer y el poder se acorta con el entrenamiento"*) y el tono editorial seco y rotundo del diseño actual ("Hierro. Sudor. Gloria.", "Cuarenta años bajo la barra.", "Dos naves, una sola disciplina.").
+4. **Desarrollar las secciones internas** (NOSOTROS, NAVES, MÁQUINAS, ACTIVIDADES, PLANES, HORARIO, CONTACTO) **manteniendo exactamente el mismo lenguaje visual, tipografía, paleta y tono que la home existente**. No reinventes el sistema de diseño, replícalo.
+5. **Sugerir copy concreto en castellano** para cada sección, respetando las frases ya creadas por el gimnasio (especialmente *"Entra como un mortal, sal como Apolo"* — que aún no se ha usado y merece protagonismo en alguna sección interna — y *"Querer y el poder se acorta con el entrenamiento"*) y el tono editorial seco y rotundo del diseño actual ("Hierro. Sudor. Gloria.", "Cuarenta y un años bajo la barra.", "Tres naves, una sola disciplina.").
 6. **Indicar qué fotos del set adjunto encajan en cada sección** y cuáles convendría que el cliente consiga aún (ver lista de fotos faltantes en el punto 4).
 
 **Reglas importantes**:
@@ -251,8 +247,8 @@ Datos que aún no tengo y que iré pasando a lo largo del proyecto. No bloquean 
 | 1 | Número de WhatsApp (no vale el fijo 910 945 909) | CTA de WhatsApp en CONTACTO y en el sticky móvil |
 | 2 | URL de la ficha de Google Business Profile | Enlazar reseñas y mapa desde CONTACTO/HORARIO; SEO local |
 | 3 | Dominio definitivo (¿apologym.es u otro?) | `CNAME` en GitHub Pages, Schema.org y `<link rel="canonical">` |
-| 4 | Validación final de cifras y biografía heredadas | Bloquear la versión final del copy |
-| 5 | Confirmación de cuota mensual (50 € o 30 €) | Resolver inconsistencia entre home (50 €) y cartel del local (30 €) |
+| 4 | Validación final del resto de cifras (180+ máquinas, 1.800 m², 1.000+ socios) | Bloquear la versión final del copy |
+| 5 | — | (Inconsistencia resuelta: 50 €/mes y 30 €/quincena) |
 | 6 | Fotos faltantes (ver lista en el punto 4) | Exterior, vestuarios, racks cargados, vista cenital |
 | 7 | Confirmación de Laura Díaz para sección Pilates | Voz, enlaces y posibles fotos propias antes de publicar |
 | 8 | Decisión sobre analítica (Google Analytics, Plausible u otra) | Determinar si hace falta banner de cookies y política de privacidad |

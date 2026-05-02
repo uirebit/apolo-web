@@ -32,13 +32,13 @@ function getStatus(now) {
 
 function Horario() {
   const dias = [
-    ['LUNES',     '06:00 — 22:30', 'NAVE I + II'],
-    ['MARTES',    '06:00 — 22:30', 'NAVE I + II'],
-    ['MIÉRCOLES', '06:00 — 22:30', 'NAVE I + II'],
-    ['JUEVES',    '06:00 — 22:30', 'NAVE I + II'],
-    ['VIERNES',   '06:00 — 22:30', 'NAVE I + II'],
-    ['SÁBADO',    '10:00 — 13:00', 'NAVE I'],
-    ['DOMINGO',   '10:00 — 13:00', 'NAVE I'],
+    ['LUNES',     '06:00 — 22:30', 'TRES NAVES'],
+    ['MARTES',    '06:00 — 22:30', 'TRES NAVES'],
+    ['MIÉRCOLES', '06:00 — 22:30', 'TRES NAVES'],
+    ['JUEVES',    '06:00 — 22:30', 'TRES NAVES'],
+    ['VIERNES',   '06:00 — 22:30', 'TRES NAVES'],
+    ['SÁBADO',    '10:00 — 13:00', 'NAVE FUERZA'],
+    ['DOMINGO',   '10:00 — 13:00', 'NAVE FUERZA'],
   ];
 
   const [now, setNow] = React.useState(() => new Date());

@@ -46,7 +46,7 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
           <div style={{ display:'flex', alignItems:'center', gap: 14, marginBottom: 36 }}>
             <span style={{ width: 48, height: 1, background:'var(--orange)' }} />
             <span className="mono" style={{ fontSize: 11, color:'var(--orange)', letterSpacing:'0.3em', fontWeight: 700 }}>
-              EST. 1984 — ARANJUEZ · POWERLIFTING
+              EST. 1985 — ARANJUEZ · POWERLIFTING
             </span>
           </div>
 
@@ -73,10 +73,10 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
             marginTop: 40, maxWidth: 560,
             fontSize: 15.5, lineHeight: 1.55, color:'var(--ink-mute)',
           }}>
-            El gimnasio más completo del sur de Madrid. Dos naves industriales en
-            Aranjuez con más de 180 máquinas: barras libres, máquinas selectorizadas,
-            cardio y zona de pilates. Dirigido por un culturista profesional con
-            cuarenta años en activo.
+            El gimnasio más completo del sur de Madrid. Tres naves industriales en
+            Aranjuez con más de 180 máquinas: una nave dedicada solo a pierna, las
+            otras dos para fuerza, cardio y máquinas. Cuarenta y un años abriendo
+            cada mañana en Aranjuez.
           </p>
 
           <div style={{ marginTop: 44, display:'flex', alignItems:'center', gap: 16 }}>
@@ -99,8 +99,8 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
           borderLeft:'1px solid var(--rule)', paddingLeft: 32, paddingTop: 4,
           display:'flex', flexDirection:'column', gap: 24,
         }}>
-          <DataRow k="01" label="MÁQUINAS" value="180+" sub="DOS NAVES · 1.800 M²" />
-          <DataRow k="02" label="DIRECTOR" value="40 AÑOS" sub="MARCOS APOLO · CULTURISMO" />
+          <DataRow k="01" label="MÁQUINAS" value="180+" sub="TRES NAVES · 1.800 M²" />
+          <DataRow k="02" label="DIRECCIÓN" value="41 AÑOS" sub="CHULE & FÁTIMA · ENTRENADORES" />
           <DataRow k="03" label="ABIERTO" value="06—22:30" sub="L A V · S/D 10—13" />
           <DataRow k="04" label="DESDE" value="€50/MES" sub="SIN MATRÍCULA · SIN PERMANENCIA" hi />
 

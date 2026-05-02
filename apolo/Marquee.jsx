@@ -3,7 +3,7 @@
 function Marquee() {
   const items = [
     'FUERZA','◉','HIPERTROFIA','◉','POWERLIFTING','◉','STRONGMAN','◉','CULTURISMO','◉','CARDIO','◉','ROCOSO',
-    '◉','40 AÑOS','◉','180+ MÁQUINAS','◉','DOS NAVES','◉','SUR DE MADRID',
+    '◉','41 AÑOS','◉','180+ MÁQUINAS','◉','TRES NAVES','◉','SUR DE MADRID',
   ];
   const row = [...items, ...items];
   return (

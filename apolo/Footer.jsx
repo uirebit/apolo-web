@@ -37,9 +37,9 @@ function Footer() {
         </div>
 
         {[
-          ['VISITAR',['Inicio','El maestro','Las naves','Inventario','Actividades','Planes','Horario']],
+          ['VISITAR',['Inicio','Nosotros','Las naves','Inventario','Actividades','Planes','Horario']],
           ['LEGAL',['Aviso legal','Privacidad','Cookies','Reglamento']],
-          ['SOCIAL',['@theapologym','@gym_apolo_powerlifting','@pilates_lauradiaz','TikTok','YouTube']],
+          ['SOCIAL',['@theapologym']],
         ].map(([title, items]) => (
           <div key={title}>
             <div className="mono" style={{ fontSize: 10, color:'var(--orange)', letterSpacing:'0.28em', fontWeight: 700, marginBottom: 16 }}>
@@ -60,7 +60,7 @@ function Footer() {
         borderTop:'1px solid var(--rule)',
       }}>
         <span className="mono" style={{ fontSize: 10, color:'var(--ink-dim)', letterSpacing:'0.22em' }}>
-          © 1984—2026 · GIMNASIO APOLO · ARANJUEZ
+          © 1985—2026 · GIMNASIO APOLO · ARANJUEZ
         </span>
         <span className="cormorant" style={{
           fontStyle:'italic', fontSize: 16, color:'var(--ink-dim)',

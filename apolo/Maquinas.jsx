@@ -25,7 +25,7 @@ function Maquinas() {
         </span>
       </div>
 
-      <div style={{ display:'grid', gridTemplateColumns:'1fr auto', alignItems:'end', gap: 48, marginBottom: 80 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'1fr auto', alignItems:'end', gap: 48, marginBottom: 56 }}>
         <h2 className="anton" style={{
           margin: 0, fontSize: 'clamp(44px, 11vw, 128px)', lineHeight: 0.9, letterSpacing:'-0.015em', textTransform:'uppercase',
         }}>
@@ -40,6 +40,29 @@ function Maquinas() {
           mensual y se sustituye cuando deja de cumplir.
         </p>
       </div>
+
+      {/* Big CTA → catálogo de máquinas */}
+      <a href="maquinas.html" style={{
+        display:'flex', alignItems:'center', justifyContent:'space-between',
+        background:'var(--orange)', color:'var(--bg)',
+        padding:'clamp(28px, 4vw, 48px) clamp(24px, 4vw, 56px)',
+        marginBottom: 80, textDecoration:'none', cursor:'pointer',
+        gap: 24, flexWrap:'wrap',
+      }}>
+        <span className="anton" style={{
+          fontSize: 'clamp(36px, 7vw, 80px)', lineHeight: 0.92,
+          letterSpacing:'-0.01em', textTransform:'uppercase',
+        }}>
+          VER MÁQUINAS →
+        </span>
+        <span className="mono" style={{
+          fontSize: 12, letterSpacing:'0.24em', fontWeight: 700, opacity: 0.85,
+          textAlign:'right',
+        }}>
+          CATÁLOGO COMPLETO<br />
+          UNA FOTO POR MÁQUINA
+        </span>
+      </a>
 
       <div style={{
         display:'grid', gridTemplateColumns:'repeat(4, 1fr)',

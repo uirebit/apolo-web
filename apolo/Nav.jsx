@@ -1,9 +1,12 @@
 // Nav — sticky top bar (with real Apolo logo)
+// linkPrefix: prepended to anchor links so the nav also works on subpages
+//   ('' on home, 'index.html' on /maquinas.html etc.)
+// activeHash: which section hash to highlight ('#inicio' by default)
 
-function Nav() {
+function Nav({ linkPrefix = '', activeHash = '#inicio' }) {
   const links = [
     ['INICIO','#inicio'],
-    ['MAESTRO','#maestro'],
+    ['NOSOTROS','#nosotros'],
     ['NAVES','#naves'],
     ['MÁQUINAS','#maquinas'],
     ['ACTIVIDADES','#actividades'],
@@ -12,6 +15,8 @@ function Nav() {
     ['CONTACTO','#contacto'],
   ];
   const mapsUrl = 'https://maps.google.com/?q=Calle+Gonzalo+Chac%C3%B3n+31+28300+Aranjuez';
+  const homeHref = linkPrefix ? linkPrefix : '#inicio';
+
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 50,
@@ -21,7 +26,7 @@ function Nav() {
       backdropFilter: 'blur(8px)',
       borderBottom: '1px solid var(--rule)',
     }}>
-      <div style={{ display:'flex', alignItems:'center', gap: 14 }}>
+      <a href={homeHref} style={{ display:'flex', alignItems:'center', gap: 14, textDecoration:'none' }}>
         <img src="apolo/img/logo-real-clean.webp" width={48} height={48} alt="Apolo Gimnasio" style={{ display:'block', flexShrink: 0 }} />
         <div style={{ display:'flex', flexDirection:'column', lineHeight: 1 }}>
           <span className="anton" style={{ fontSize: 22, letterSpacing:'0.04em', color:'var(--ink)' }}>APOLO</span>
@@ -29,15 +34,18 @@ function Nav() {
             GIMNASIO · POWERLIFTING
           </span>
         </div>
-      </div>
+      </a>
 
       <nav className="nav-menu-desktop" style={{ display:'flex', gap: 28, fontSize: 11, fontWeight: 700, letterSpacing:'0.18em' }}>
-        {links.map(([n,h],i) => (
-          <a key={n} href={h} style={{ color: i===0 ? 'var(--orange)' : 'var(--ink)', position:'relative' }}>
-            {n}
-            {i===0 && <span style={{ position:'absolute', left:0, bottom:-6, width:'100%', height:2, background:'var(--orange)' }} />}
-          </a>
-        ))}
+        {links.map(([n,h]) => {
+          const isActive = h === activeHash;
+          return (
+            <a key={n} href={`${linkPrefix}${h}`} style={{ color: isActive ? 'var(--orange)' : 'var(--ink)', position:'relative' }}>
+              {n}
+              {isActive && <span style={{ position:'absolute', left:0, bottom:-6, width:'100%', height:2, background:'var(--orange)' }} />}
+            </a>
+          );
+        })}
       </nav>
 
       <div style={{ display:'flex', alignItems:'center', gap: 14 }}>

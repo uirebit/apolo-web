@@ -29,7 +29,7 @@ function Manifiesto() {
         <span className="mono" style={{
           fontSize: 11, color:'var(--orange)', letterSpacing:'0.32em', fontWeight: 700,
         }}>
-          MANIFIESTO · DESDE 1984
+          MANIFIESTO · DESDE 1985
         </span>
         <h2 className="anton" style={{
           margin:'24px 0 0', fontSize: 'clamp(40px, 9vw, 116px)', lineHeight: 0.95, letterSpacing:'-0.015em',
