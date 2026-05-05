@@ -7,7 +7,11 @@ function Actividades() {
       name: 'PILATES',
       instructor: 'LAURA DÍAZ',
       handle: '@PILATES_LAURADIAZ',
-      img: 'apolo/img/pilates.jpg',
+      imgs: [
+        'apolo/img/pilates/sala-pilates-1.webp',
+        'apolo/img/pilates/sala-pilates-2.webp',
+        'apolo/img/pilates/sala-pilates-3.webp',
+      ],
       desc: 'Sala dedicada con reformer y trapecio. Grupos reducidos para movilidad, control y prevención de lesiones. Sesión específica para embarazadas martes y jueves a las 12:00 H.',
       horario: [
         'L Y X · 17—21 H',
@@ -20,7 +24,7 @@ function Actividades() {
       name: 'BODY COMBAT',
       instructor: 'POR CONFIRMAR',
       handle: null,
-      img: null,
+      imgs: [],
       desc: 'Entrenamiento de alta intensidad inspirado en artes marciales. Cardio, fuerza y técnica en una sola sesión.',
       horario: ['HORARIOS EN RECEPCIÓN'],
     },
@@ -29,7 +33,7 @@ function Actividades() {
       name: 'SALSA',
       instructor: 'POR CONFIRMAR',
       handle: null,
-      img: null,
+      imgs: [],
       desc: 'Clases para todos los niveles. Ritmo, coordinación y comunidad sin necesidad de pareja.',
       horario: ['HORARIOS EN RECEPCIÓN'],
     },
@@ -84,21 +88,51 @@ function Actividades() {
   );
 }
 
-function ActividadCard({ tag, name, instructor, handle, img, desc, horario }) {
+function ActividadCard({ tag, name, instructor, handle, imgs, desc, horario }) {
+  const total = (imgs && imgs.length) || 0;
+  const hasImg = total > 0;
+  const [idx, setIdx] = React.useState(0);
+  const startX = React.useRef(0);
+  const next = () => setIdx(i => (i + 1) % total);
+  const prev = () => setIdx(i => (i - 1 + total) % total);
+  const onTouchStart = e => { startX.current = e.touches[0].clientX; };
+  const onTouchEnd = e => {
+    const dx = e.changedTouches[0].clientX - startX.current;
+    if (Math.abs(dx) > 40) (dx < 0 ? next : prev)();
+  };
+
+  const arrowStyle = {
+    position:'absolute', top:'50%', transform:'translateY(-50%)', zIndex: 3,
+    width: 36, height: 36,
+    border:'1px solid rgba(245,241,234,0.45)',
+    background:'rgba(20,18,16,0.55)', color:'var(--ink)',
+    fontFamily:"'Anton', sans-serif", fontSize: 20, lineHeight: 1, cursor:'pointer',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    backdropFilter:'blur(4px)',
+  };
+
   return (
     <article style={{
       background:'var(--bg)', border:'1px solid var(--rule)',
       display:'flex', flexDirection:'column',
     }}>
-      {/* Imagen o bloque amarillo si no hay foto aún */}
-      <div style={{
+      {/* Imagen / carrusel o bloque amarillo si no hay fotos aún */}
+      <div onTouchStart={hasImg ? onTouchStart : undefined} onTouchEnd={hasImg ? onTouchEnd : undefined} style={{
         aspectRatio: '4/3',
         position:'relative',
-        background: img ? 'var(--bg-2)' : 'var(--orange)',
-        backgroundImage: img ? `url(${img})` : 'none',
-        backgroundSize:'cover', backgroundPosition:'center',
+        overflow:'hidden',
+        background: hasImg ? 'var(--bg-2)' : 'var(--orange)',
       }}>
-        {!img && (
+        {hasImg && imgs.map((src, i) => (
+          <div key={src} style={{
+            position:'absolute', inset: 0,
+            backgroundImage:`url(${src})`,
+            backgroundSize:'cover', backgroundPosition:'center',
+            opacity: i === idx ? 1 : 0,
+            transition:'opacity 0.5s ease',
+          }} />
+        ))}
+        {!hasImg && (
           <div className="anton" style={{
             position:'absolute', inset: 0,
             display:'flex', alignItems:'center', justifyContent:'center',
@@ -107,12 +141,37 @@ function ActividadCard({ tag, name, instructor, handle, img, desc, horario }) {
           }}>{name}</div>
         )}
         <span style={{
-          position:'absolute', top: 16, left: 16,
+          position:'absolute', top: 16, left: 16, zIndex: 2,
           padding:'5px 9px',
-          background: img ? 'var(--orange)' : 'var(--bg)',
-          color: img ? 'var(--bg)' : 'var(--orange)',
+          background: hasImg ? 'var(--orange)' : 'var(--bg)',
+          color: hasImg ? 'var(--bg)' : 'var(--orange)',
           fontFamily:"'JetBrains Mono', monospace", fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
         }}>{tag}</span>
+
+        {total > 1 && (
+          <React.Fragment>
+            <span style={{
+              position:'absolute', top: 16, right: 16, zIndex: 2,
+              padding:'5px 9px', background:'rgba(20,18,16,0.55)', color:'var(--ink)',
+              fontFamily:"'JetBrains Mono', monospace", fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
+              backdropFilter:'blur(4px)',
+            }}>{String(idx+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</span>
+            <button onClick={prev} aria-label="Foto anterior" style={{ ...arrowStyle, left: 12 }}>‹</button>
+            <button onClick={next} aria-label="Foto siguiente" style={{ ...arrowStyle, right: 12 }}>›</button>
+            <div style={{
+              position:'absolute', bottom: 12, left: 0, right: 0, zIndex: 3,
+              display:'flex', justifyContent:'center', gap: 6,
+            }}>
+              {imgs.map((_, i) => (
+                <button key={i} onClick={() => setIdx(i)} aria-label={`Foto ${i+1}`} style={{
+                  width: i === idx ? 24 : 8, height: 4, padding: 0, border:'none',
+                  background: i === idx ? 'var(--orange)' : 'rgba(245,241,234,0.45)',
+                  cursor:'pointer', transition:'all 0.3s ease',
+                }} />
+              ))}
+            </div>
+          </React.Fragment>
+        )}
       </div>
 
       <div style={{ padding:'28px 28px 28px', display:'flex', flexDirection:'column', flex: 1 }}>

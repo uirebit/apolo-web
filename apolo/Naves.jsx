@@ -84,6 +84,9 @@ function Naves() {
         />
       </div>
 
+      {/* Espacio anexo: sala de pilates */}
+      <PilatesShowcase />
+
       {/* Address strip */}
       <div style={{
         marginTop: 56,
@@ -206,4 +209,106 @@ function NaveCard({ tag, year, title, area, imgs, features }) {
     </article>
   );
 }
+function PilatesShowcase() {
+  const imgs = [
+    'apolo/img/pilates/sala-pilates-1.webp',
+    'apolo/img/pilates/sala-pilates-2.webp',
+    'apolo/img/pilates/sala-pilates-3.webp',
+  ];
+  const total = imgs.length;
+  const [idx, setIdx] = React.useState(0);
+  const startX = React.useRef(0);
+  const next = () => setIdx(i => (i + 1) % total);
+  const prev = () => setIdx(i => (i - 1 + total) % total);
+  const onTouchStart = e => { startX.current = e.touches[0].clientX; };
+  const onTouchEnd = e => {
+    const dx = e.changedTouches[0].clientX - startX.current;
+    if (Math.abs(dx) > 40) (dx < 0 ? next : prev)();
+  };
+
+  const arrowStyle = {
+    position:'absolute', top:'50%', transform:'translateY(-50%)', zIndex: 3,
+    width: 44, height: 44,
+    border:'1px solid rgba(245,241,234,0.45)',
+    background:'rgba(20,18,16,0.55)', color:'var(--ink)',
+    fontFamily:"'Anton', sans-serif", fontSize: 24, lineHeight: 1, cursor:'pointer',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    backdropFilter:'blur(4px)',
+  };
+
+  return (
+    <div className="pilates-showcase" style={{
+      marginTop: 56,
+      display:'grid', gridTemplateColumns:'1.4fr 1fr', gap: 24,
+      background:'var(--bg)', border:'1px solid var(--rule)',
+    }}>
+      <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} style={{
+        aspectRatio: '16/10',
+        position:'relative', overflow:'hidden', background:'var(--bg-2)',
+      }}>
+        {imgs.map((src, i) => (
+          <div key={src} style={{
+            position:'absolute', inset: 0,
+            backgroundImage:`url(${src})`,
+            backgroundSize:'cover', backgroundPosition:'center',
+            opacity: i === idx ? 1 : 0,
+            transition:'opacity 0.5s ease',
+          }} />
+        ))}
+        <span style={{
+          position:'absolute', top: 18, left: 18, zIndex: 2,
+          padding:'6px 10px', background:'var(--orange)', color:'var(--bg)',
+          fontFamily:"'JetBrains Mono', monospace", fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
+        }}>+ ESPACIO ANEXO</span>
+        <span style={{
+          position:'absolute', top: 18, right: 18, zIndex: 2,
+          padding:'6px 10px', background:'rgba(20,18,16,0.55)', color:'var(--ink)',
+          fontFamily:"'JetBrains Mono', monospace", fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
+          backdropFilter:'blur(4px)',
+        }}>{String(idx+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</span>
+        <button onClick={prev} aria-label="Foto anterior" style={{ ...arrowStyle, left: 14 }}>‹</button>
+        <button onClick={next} aria-label="Foto siguiente" style={{ ...arrowStyle, right: 14 }}>›</button>
+        <div style={{
+          position:'absolute', bottom: 14, left: 0, right: 0, zIndex: 3,
+          display:'flex', justifyContent:'center', gap: 6,
+        }}>
+          {imgs.map((_, i) => (
+            <button key={i} onClick={() => setIdx(i)} aria-label={`Foto ${i+1}`} style={{
+              width: i === idx ? 28 : 8, height: 4, padding: 0, border:'none',
+              background: i === idx ? 'var(--orange)' : 'rgba(245,241,234,0.45)',
+              cursor:'pointer', transition:'all 0.3s ease',
+            }} />
+          ))}
+        </div>
+      </div>
+
+      <div style={{ padding:'36px 32px', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+        <span className="mono" style={{
+          fontSize: 11, color:'var(--orange)', letterSpacing:'0.3em', fontWeight: 700,
+        }}>SALA DE PILATES</span>
+        <h3 className="anton" style={{
+          margin:'14px 0 0', fontSize:'clamp(32px, 4vw, 52px)', lineHeight: 0.95,
+          letterSpacing:'-0.01em', textTransform:'uppercase',
+        }}>
+          REFORMER<br />Y TRAPECIO.
+        </h3>
+        <p style={{
+          margin:'22px 0 0', fontSize: 14, lineHeight: 1.6, color:'var(--ink-mute)',
+        }}>
+          Espacio dedicado dentro de la Nave III. Equipamiento profesional
+          para clases dirigidas en grupos reducidos, con sesión específica
+          para embarazadas.
+        </p>
+        <a href="#actividades" className="mono" style={{
+          marginTop: 24, alignSelf:'flex-start',
+          padding:'10px 16px', border:'1px solid var(--orange)',
+          color:'var(--orange)', fontSize: 11, letterSpacing:'0.22em', fontWeight: 700,
+        }}>
+          VER HORARIOS →
+        </a>
+      </div>
+    </div>
+  );
+}
+
 window.Naves = Naves;
