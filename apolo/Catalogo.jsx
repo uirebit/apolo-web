@@ -43,13 +43,13 @@ function Catalogo() {
     { cat:'HOMBRO',     name:'Press hombro selectorizado', img:null },
     { cat:'HOMBRO',     name:'Elevación lateral máquina', img:null },
     { cat:'BRAZO',      name:'Curl bíceps Scott',         img:null },
-    { cat:'BRAZO',      name:'Press francés máquina',     img:null },
+    { cat:'BRAZO',      name:'Press francés máquina',     img:'apolo/img/maquinas/triceps_nautilus.webp' },
 
     // POLEAS
     { cat:'POLEAS',     name:'Polea alta',                img:null },
     { cat:'POLEAS',     name:'Polea baja',                img:null },
     { cat:'POLEAS',     name:'Polea cruzada',             img:null },
-    { cat:'POLEAS',     name:'Doble torre',               img:null },
+    { cat:'POLEAS',     name:'Doble torre',               img:'apolo/img/maquinas/multi_railes.webp' },
 
     // CARDIO — Nave III
     { cat:'CARDIO',     name:'Cinta de correr',           img:null },
