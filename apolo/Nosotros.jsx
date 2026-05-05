@@ -1,6 +1,28 @@
 // Nosotros — Chule y Fátima, dirección y entrenamiento personal
 
 function Nosotros() {
+  // ─────────────────────────────────────────────────────────
+  // PENDIENTES DE CONFIRMAR CON FÁTIMA — actualizar copy:
+  //
+  //  · Apellido de Apolonio (¿se puede publicar?)
+  //  · Salvador Ruiz, competidor internacional amigo de Apolonio:
+  //    ¿se menciona en la web?
+  //  · Federación y categoría de las competiciones de Chule
+  //    (39/40/41 años · 3º y 4º Madrid-Castilla · finalista nacional)
+  //  · Lugar exacto del campeonato nacional (sonó "nanuncia" en audio)
+  //  · Federación de powerlifting de Fátima
+  //  · Categoría oficial exacta (¿-44 kg? ¿-47 kg pesando 44?)
+  //  · ¿"Top 3" del récord se refiere a nacional? Aclarar
+  //  · ¿El récord sigue vigente o lo han batido?
+  //  · Año exacto de la competición de Fátima (~2019, antes COVID)
+  //  · Año de fundación del Club de Piragüismo de Aranjuez
+  //  · Alcance del "primer gimnasio con maquinaria específica":
+  //    ¿Aranjuez, sur de Madrid, España? Por ahora omitido del copy.
+  //  · Nombres concretos o cifra de competidores formados en Apolo
+  //  · Socios históricos disponibles para testimonio (nombre/foto)
+  //  · ¿Confirmar el detalle de "tres bancos olímpicos" del primer
+  //    local? El brief lo decía pero Fátima no lo ha confirmado.
+  // ─────────────────────────────────────────────────────────
   return (
     <section id="nosotros" style={{
       position:'relative', padding:'140px 56px 140px',
@@ -64,17 +86,25 @@ function Nosotros() {
             display:'grid', gridTemplateColumns:'1fr 1fr', gap: 36, marginTop: 56,
           }}>
             <p style={{ fontSize: 15, lineHeight: 1.65, color:'var(--ink-mute)', margin: 0 }}>
-              Chule abrió el primer Apolo en 1985, en la calle San Antonio
-              de Aranjuez. Tres bancos olímpicos, una jaula de sentadillas
-              hecha por un soldador de Ocaña y la persiana subida cada
-              mañana. Cuarenta y un años después, sigue subiéndola.
+              Chule abrió el primer Apolo en mayo de 1985, en la calle
+              San Antonio 120 de Aranjuez. Tenía 27 años y llevaba
+              entrenando desde los doce. Antes había sido cofundador del
+              Club de Piragüismo de Aranjuez. La maquinaria de
+              musculación de aquella primera sala la hizo a mano un
+              herrero del pueblo. El nombre lo eligió en honor a
+              Apolonio, federativo del fisicoculturismo español con
+              quien tramitó la primera licencia del gimnasio.
             </p>
             <p style={{ fontSize: 15, lineHeight: 1.65, color:'var(--ink-mute)', margin: 0 }}>
-              En 2016 cruzó al polígono y abrió las tres naves que hay
-              hoy: una entera para pierna, las otras dos para fuerza,
-              cardio y máquinas. Lleva el gimnasio junto a su hija
-              Fátima. Los dos entrenan, los dos compiten, y los dos
-              cogen entrenamiento personalizado a quien lo pide.
+              En agosto de 2015 cerró San Antonio y cruzó al polígono.
+              Las tres naves abrieron a la vez: una entera para pierna,
+              las otras dos para fuerza, cardio y máquinas. Lo lleva
+              junto a su hija Fátima, que entró a trabajar hace quince
+              años y se crió dentro. Los dos compitieron — culturismo
+              él, powerlifting ella — y los dos cogen entrenamiento
+              personalizado a quien lo pide. De las naves han salido
+              competidores propios y por aquí han pasado a entrenar
+              otros tantos.
             </p>
           </div>
 
@@ -85,10 +115,10 @@ function Nosotros() {
             border:'1px solid var(--rule)',
           }}>
             {[
-              ['1985','SAN ANTONIO · ARANJUEZ'],
-              ['2016','NAVES POLÍGONO'],
+              ['1985','SAN ANTONIO · 120'],
+              ['2015','TRES NAVES POLÍGONO'],
               ['41','AÑOS EN ARANJUEZ'],
-              ['2','ENTRENADORES PERSONALES'],
+              ['130/44','PESO MUERTO · BW · KG'],
             ].map(([n,l], i) => (
               <div key={i} style={{
                 padding:'28px 24px',
@@ -98,6 +128,28 @@ function Nosotros() {
                 <div className="mono" style={{ fontSize: 9, color:'var(--ink-dim)', letterSpacing:'0.22em', marginTop: 10 }}>{l}</div>
               </div>
             ))}
+          </div>
+
+          {/* Récord destacado · Fátima */}
+          <div style={{
+            marginTop: 40, padding:'24px 28px',
+            background:'var(--bg-2)',
+            borderTop:'2px solid var(--orange)',
+            display:'grid', gridTemplateColumns:'auto 1fr', gap: 32, alignItems:'center',
+          }}>
+            <div className="anton" style={{ fontSize: 56, lineHeight: 1, color:'var(--orange)' }}>
+              130 / 44
+            </div>
+            <div>
+              <div className="mono" style={{ fontSize: 10, color:'var(--orange)', letterSpacing:'0.28em', fontWeight: 700 }}>
+                RÉCORD POWERLIFTING
+              </div>
+              <div style={{ fontSize: 14, color:'var(--ink-mute)', marginTop: 8 }}>
+                Fátima — 2ª de Madrid, peso muerto 130 kg en categoría
+                44 kg de peso corporal. Récord federativo. Las copas de
+                la recepción son suyas.
+              </div>
+            </div>
           </div>
 
           {/* Pull quote */}

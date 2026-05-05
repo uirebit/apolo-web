@@ -41,7 +41,7 @@ function Manifiesto() {
         <div className="cormorant" style={{
           marginTop: 28, fontSize: 18, fontStyle:'italic', color:'var(--ink-mute)', letterSpacing:'0.02em',
         }}>
-          — pintado en el pasillo de la Nave I
+          — frase de Fátima, pintada en el pasillo de la Nave I
         </div>
       </div>
     </section>
