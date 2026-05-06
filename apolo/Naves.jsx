@@ -38,8 +38,8 @@ function Naves() {
           title="TREN SUPERIOR"
           area="700 M²"
           imgs={[
-            'apolo/img/nave-mancuernas.jpg',
-            'apolo/img/naves-rojo.jpg',
+            'apolo/img/nave-mancuernas.webp',
+            'apolo/img/naves-rojo.webp',
           ]}
           features={[
             'Barras olímpicas y power racks',
@@ -55,8 +55,8 @@ function Naves() {
           title="CARDIO & DEFINICIÓN"
           area="500 M²"
           imgs={[
-            'apolo/img/cardio.jpg',
-            'apolo/img/nave-panoramica.jpg',
+            'apolo/img/cardio.webp',
+            'apolo/img/nave-panoramica.webp',
           ]}
           features={[
             'Cintas · elípticas · remos · stair · bicicletas',
@@ -71,7 +71,7 @@ function Naves() {
           title="100% PIERNA"
           area="600 M²"
           imgs={[
-            'apolo/img/zona-pierna.jpg',
+            'apolo/img/zona-pierna.webp',
           ]}
           features={[
             'Nave entera dedicada al tren inferior',

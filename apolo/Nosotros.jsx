@@ -46,7 +46,7 @@ function Nosotros() {
         <div style={{ position:'relative' }}>
           <div style={{
             aspectRatio: '4/5',
-            backgroundImage:'url(apolo/img/recepcion-nueva.jpg)',
+            backgroundImage:'url(apolo/img/recepcion-nueva.webp)',
             backgroundSize:'cover', backgroundPosition:'center 30%',
             filter:'grayscale(20%) contrast(1.1) brightness(0.95)',
             border:'1px solid var(--rule)',

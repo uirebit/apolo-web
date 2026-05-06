@@ -14,7 +14,7 @@ function Hero({ headline = 'HIERRO. SUDOR. GLORIA.' }) {
       {/* Background — instructor on battle ropes */}
       <div style={{
         position:'absolute', inset: 0,
-        backgroundImage:'url(apolo/img/instructora.jpg)',
+        backgroundImage:'url(apolo/img/instructora.webp)',
         backgroundSize:'cover',
         backgroundPosition:'center 25%',
         filter:'contrast(1.1) brightness(0.7)',

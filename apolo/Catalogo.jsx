@@ -4,7 +4,7 @@
 
 function Catalogo() {
   // Seed catalog. Replace `img: null` with a path under apolo/img/ when the
-  // photo is available (e.g. img: 'apolo/img/maquinas/press-banca.jpg').
+  // photo is available (e.g. img: 'apolo/img/maquinas/press-banca.webp').
   const items = [
     // FUERZA — Nave I
     { cat:'FUERZA',     name:'Press banca olímpico',      img:null },

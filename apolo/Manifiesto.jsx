@@ -12,7 +12,7 @@ function Manifiesto() {
     }}>
       <div style={{
         position:'absolute', inset: 0,
-        backgroundImage:'url(apolo/img/mural-mortal-apolo.jpg)',
+        backgroundImage:'url(apolo/img/mural-mortal-apolo.webp)',
         backgroundSize:'cover',
         backgroundPosition:'center',
         filter:'brightness(0.45) contrast(1.05)',
