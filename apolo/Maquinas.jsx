@@ -5,7 +5,7 @@ function Maquinas() {
     { tag:'A', name:'BARRAS LIBRES', count: 24, items:'Olímpicas · powerlifting · safety squat · trap bar · log · axle' },
     { tag:'B', name:'JAULAS & PLATAFORMAS', count: 16, items:'Jaulas olímpicas · half racks · plataformas de tiro · monolift' },
     { tag:'C', name:'MANCUERNAS', count: 40, items:'Hexagonales 2.5 → 70 kg · pares dobles en pesos clave' },
-    { tag:'D', name:'MÁQUINAS DE FUERZA', count: 32, items:'Hammer Strength · Atlantis · Cybex · placa cargada selectorizada' },
+    { tag:'D', name:'MÁQUINAS DE FUERZA', count: 32, items:'Nautilus en su mayoría · placa cargada selectorizada · convergentes' },
     { tag:'E', name:'POLEAS & CABLES', count: 18, items:'Polea alta · baja · cruzada · pull-down · doble torre' },
     { tag:'F', name:'CARDIO', count: 30, items:'Cintas · elípticas · remos · bicicletas · stair · assault' },
     { tag:'G', name:'STRONGMAN', count: 12, items:'Yugo · atlas stones · farmer walk · prowler · sled · neumáticos' },
@@ -39,6 +39,35 @@ function Maquinas() {
           Inventario completo a fecha de hoy. Cada máquina tiene mantenimiento
           mensual y se sustituye cuando deja de cumplir.
         </p>
+      </div>
+
+      {/* Sello Nautilus — marca dominante del parque */}
+      <div style={{
+        display:'grid', gridTemplateColumns:'auto 1fr', gap: 'clamp(24px, 4vw, 56px)',
+        alignItems:'center',
+        background:'var(--bg-2)', border:'1px solid var(--rule)',
+        borderLeft:'3px solid var(--orange)',
+        padding:'clamp(24px, 3vw, 36px) clamp(24px, 3vw, 40px)',
+        marginBottom: 24,
+      }}>
+        <div className="anton" style={{
+          fontSize: 'clamp(56px, 9vw, 112px)', lineHeight: 0.9,
+          color:'var(--orange)', letterSpacing:'-0.02em',
+        }}>
+          90<span style={{ fontSize: '0.55em', verticalAlign:'top' }}>%</span> <span style={{ color:'var(--ink)' }}>NAUTILUS</span>
+        </div>
+        <div>
+          <div className="mono" style={{
+            fontSize: 10, color:'var(--orange)', letterSpacing:'0.28em', fontWeight: 700, marginBottom: 10,
+          }}>
+            PARQUE DE MÁQUINAS
+          </div>
+          <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color:'var(--ink-mute)' }}>
+            Casi todo el equipo selectorizado del gimnasio es Nautilus,
+            la marca de referencia americana en máquinas de musculación.
+            El resto se completa con piezas libres y especializadas.
+          </p>
+        </div>
       </div>
 
       {/* Big CTA → catálogo de máquinas */}
