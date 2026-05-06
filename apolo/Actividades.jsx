@@ -21,21 +21,22 @@ function Actividades() {
     },
     {
       tag: '02',
-      name: 'BODY COMBAT',
-      instructor: 'POR CONFIRMAR',
-      handle: null,
-      imgs: [],
-      desc: 'Entrenamiento de alta intensidad inspirado en artes marciales. Cardio, fuerza y técnica en una sola sesión.',
-      horario: ['HORARIOS EN RECEPCIÓN'],
-    },
-    {
-      tag: '03',
       name: 'SALSA',
       instructor: 'POR CONFIRMAR',
       handle: null,
       imgs: [],
       desc: 'Clases para todos los niveles. Ritmo, coordinación y comunidad sin necesidad de pareja.',
       horario: ['HORARIOS EN RECEPCIÓN'],
+    },
+    {
+      tag: '03',
+      name: 'POLE DANCE',
+      instructor: 'COCO DANCE',
+      handle: '@cocodance.es',
+      web: 'https://cocodance.es/',
+      imgs: [],
+      desc: 'Pole dance, exotic y acrobático en colaboración con el estudio Coco Dance. Fuerza, flexibilidad y creatividad sobre la barra.',
+      horario: ['HORARIOS EN COCODANCE.ES'],
     },
   ];
 
@@ -71,7 +72,7 @@ function Actividades() {
         </p>
       </div>
 
-      <div style={{
+      <div className="actividades-grid" style={{
         display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap: 18,
       }}>
         {actividades.map(a => <ActividadCard key={a.tag} {...a} />)}
@@ -88,7 +89,7 @@ function Actividades() {
   );
 }
 
-function ActividadCard({ tag, name, instructor, handle, imgs, desc, horario }) {
+function ActividadCard({ tag, name, instructor, handle, web, imgs, desc, horario }) {
   const total = (imgs && imgs.length) || 0;
   const hasImg = total > 0;
   const [idx, setIdx] = React.useState(0);
@@ -183,7 +184,11 @@ function ActividadCard({ tag, name, instructor, handle, imgs, desc, horario }) {
           fontSize: 10, color: instructor === 'POR CONFIRMAR' ? 'var(--ink-dim)' : 'var(--orange)',
           letterSpacing:'0.22em', fontWeight: 700, marginTop: 8,
         }}>
-          {instructor}{handle && ` · ${handle}`}
+          {instructor}
+          {handle && ' · '}
+          {handle && (web ? (
+            <a href={web} target="_blank" rel="noopener noreferrer" style={{ color:'inherit', textDecoration:'underline' }}>{handle}</a>
+          ) : handle)}
         </div>
 
         <p style={{
@@ -195,16 +200,22 @@ function ActividadCard({ tag, name, instructor, handle, imgs, desc, horario }) {
           display:'flex', flexDirection:'column', gap: 8,
           borderTop:'1px solid var(--rule)', paddingTop: 18,
         }}>
-          {horario.map((h, i) => (
-            <li key={i} className="mono" style={{
-              fontSize: 11.5, letterSpacing:'0.16em', fontWeight: 600,
-              color: h === 'HORARIOS EN RECEPCIÓN' ? 'var(--ink-dim)' : 'var(--ink)',
-            }}>
-              {h === 'HORARIOS EN RECEPCIÓN' ? (
-                <span style={{ fontStyle:'italic', fontWeight: 400 }}>{h}</span>
-              ) : h}
-            </li>
-          ))}
+          {horario.map((h, i) => {
+            const isPlaceholder = h === 'HORARIOS EN RECEPCIÓN';
+            const isWebLink = web && h.startsWith('HORARIOS EN ') && !isPlaceholder;
+            return (
+              <li key={i} className="mono" style={{
+                fontSize: 11.5, letterSpacing:'0.16em', fontWeight: 600,
+                color: isPlaceholder ? 'var(--ink-dim)' : 'var(--ink)',
+              }}>
+                {isPlaceholder ? (
+                  <span style={{ fontStyle:'italic', fontWeight: 400 }}>{h}</span>
+                ) : isWebLink ? (
+                  <a href={web} target="_blank" rel="noopener noreferrer" style={{ color:'var(--orange)', textDecoration:'underline' }}>{h} ↗</a>
+                ) : h}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </article>
