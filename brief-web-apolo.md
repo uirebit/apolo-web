@@ -252,6 +252,6 @@ Datos que aún no tengo y que iré pasando a lo largo del proyecto. No bloquean 
 | 6 | Fotos faltantes (ver lista en el punto 4) | Exterior, vestuarios, racks cargados, vista cenital |
 | 7 | Confirmación de Laura Díaz para sección Pilates | Voz, enlaces y posibles fotos propias antes de publicar |
 | 8 | Decisión sobre analítica (Google Analytics, Plausible u otra) | Determinar si hace falta banner de cookies y política de privacidad |
-| 9 | Email de contacto definitivo | Sustituir el `hola@apolostrength.es` actual del footer por el email real |
+| 9 | — | (Resuelto: email de contacto = `Apoloaranjuez@gmail.com`, ya colocado en footer y páginas legales) |
 | 10 | Lista completa de actividades dirigidas (más allá de Pilates) | Rellenar las tarjetas de la sección ACTIVIDADES con datos reales (Body Combat, Salsa y las que falten) |
 | 11 | Por cada actividad: instructor, horario y observaciones | Sustituir los placeholders "INFO EN RECEPCIÓN" por información concreta |

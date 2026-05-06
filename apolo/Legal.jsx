@@ -20,7 +20,7 @@ const LEGAL_PAGES = {
               <li><strong>NIF / CIF:</strong> [PENDIENTE]</li>
               <li><strong>Domicilio:</strong> C/ Gonzalo Chacón, 31 — 28300 Aranjuez (Madrid)</li>
               <li><strong>Teléfono:</strong> 910 945 909</li>
-              <li><strong>Email:</strong> [PENDIENTE — email de contacto]</li>
+              <li><strong>Email:</strong> <a href="mailto:Apoloaranjuez@gmail.com">Apoloaranjuez@gmail.com</a></li>
               <li><strong>Datos registrales:</strong> [PENDIENTE — si la titularidad es una sociedad inscrita en el Registro Mercantil]</li>
               <li><strong>Actividad:</strong> explotación de gimnasio y centro de entrenamiento físico.</li>
             </ul>
@@ -63,7 +63,7 @@ const LEGAL_PAGES = {
               <li><strong>Razón social / Titular:</strong> [PENDIENTE]</li>
               <li><strong>NIF / CIF:</strong> [PENDIENTE]</li>
               <li><strong>Domicilio:</strong> C/ Gonzalo Chacón, 31 — 28300 Aranjuez (Madrid)</li>
-              <li><strong>Email:</strong> [PENDIENTE]</li>
+              <li><strong>Email:</strong> <a href="mailto:Apoloaranjuez@gmail.com">Apoloaranjuez@gmail.com</a></li>
             </ul>
           </React.Fragment>
         ),
@@ -92,7 +92,7 @@ const LEGAL_PAGES = {
         h: '7. Derechos del usuario',
         body: (
           <React.Fragment>
-            <p>El usuario puede ejercer en cualquier momento los siguientes derechos enviando un correo a <strong>[PENDIENTE — email]</strong> o por escrito a la dirección postal indicada, acompañando copia de un documento identificativo:</p>
+            <p>El usuario puede ejercer en cualquier momento los siguientes derechos enviando un correo a <strong><a href="mailto:Apoloaranjuez@gmail.com">Apoloaranjuez@gmail.com</a></strong> o por escrito a la dirección postal indicada, acompañando copia de un documento identificativo:</p>
             <ul className="legal-list">
               <li>Acceso a sus datos personales.</li>
               <li>Rectificación de datos inexactos.</li>

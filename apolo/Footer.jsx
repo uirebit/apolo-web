@@ -61,6 +61,9 @@ function Footer({ linkPrefix = '' }) {
           <div style={{ marginTop: 20, fontSize: 13.5, color:'var(--ink-mute)' }}>
             <a href="tel:+34910945909" style={{ color:'var(--orange)', fontWeight: 700, letterSpacing:'0.06em' }}>910 945 909</a>
           </div>
+          <div style={{ marginTop: 8, fontSize: 13.5, color:'var(--ink-mute)' }}>
+            <a href="mailto:Apoloaranjuez@gmail.com" style={{ color:'var(--ink-mute)' }}>Apoloaranjuez@gmail.com</a>
+          </div>
         </div>
 
         {blocks.map(([title, items]) => (

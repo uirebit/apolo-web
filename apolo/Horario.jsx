@@ -37,8 +37,8 @@ function Horario() {
     ['MIÉRCOLES', '06:00 — 22:30', 'TRES NAVES'],
     ['JUEVES',    '06:00 — 22:30', 'TRES NAVES'],
     ['VIERNES',   '06:00 — 22:30', 'TRES NAVES'],
-    ['SÁBADO',    '10:00 — 13:00', 'NAVE FUERZA'],
-    ['DOMINGO',   '10:00 — 13:00', 'NAVE FUERZA'],
+    ['SÁBADO',    '10:00 — 13:00', 'TRES NAVES'],
+    ['DOMINGO',   '10:00 — 13:00', 'TRES NAVES'],
   ];
 
   const [now, setNow] = React.useState(() => new Date());
