@@ -31,10 +31,13 @@ function Actividades() {
     {
       tag: '03',
       name: 'POLE DANCE',
-      instructor: 'COCO DANCE',
-      handle: '@cocodance.es',
+      instructor: 'NATALIA GÁRATE',
+      handle: '@COCOSTUDIODANCE',
+      handleUrl: 'https://www.instagram.com/cocostudiodance/',
       web: 'https://cocodance.es/',
-      imgs: [],
+      imgs: [
+        'apolo/img/poledance/pole_dance_card.webp',
+      ],
       desc: 'Pole dance, exotic y acrobático en colaboración con el estudio Coco Dance. Fuerza, flexibilidad y creatividad sobre la barra.',
       horario: ['HORARIOS EN COCODANCE.ES'],
     },
@@ -89,7 +92,7 @@ function Actividades() {
   );
 }
 
-function ActividadCard({ tag, name, instructor, handle, web, imgs, desc, horario }) {
+function ActividadCard({ tag, name, instructor, handle, handleUrl, web, imgs, desc, horario }) {
   const total = (imgs && imgs.length) || 0;
   const hasImg = total > 0;
   const [idx, setIdx] = React.useState(0);
@@ -186,8 +189,8 @@ function ActividadCard({ tag, name, instructor, handle, web, imgs, desc, horario
         }}>
           {instructor}
           {handle && ' · '}
-          {handle && (web ? (
-            <a href={web} target="_blank" rel="noopener noreferrer" style={{ color:'inherit', textDecoration:'underline' }}>{handle}</a>
+          {handle && (handleUrl ? (
+            <a href={handleUrl} target="_blank" rel="noopener noreferrer" style={{ color:'inherit', textDecoration:'underline' }}>{handle}</a>
           ) : handle)}
         </div>
 
