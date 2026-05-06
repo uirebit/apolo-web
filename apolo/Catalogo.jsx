@@ -24,8 +24,9 @@ function Catalogo() {
     { cat:'PIERNA',     name:'Leg curl sentado',          img:null },
     { cat:'PIERNA',     name:'Leg extension',             img:null },
     { cat:'PIERNA',     name:'Aductor / abductor',        img:null },
-    { cat:'PIERNA',     name:'Gemelo de pie',             img:null },
-    { cat:'PIERNA',     name:'Gemelo sentado',            img:null },
+    { cat:'PIERNA',     name:'Gemelo de pie',             img:'apolo/img/maquinas/gemelo_1.webp' },
+    { cat:'PIERNA',     name:'Gemelo sentado Nautilus',   img:'apolo/img/maquinas/gemelo_3.webp' },
+    { cat:'PIERNA',     name:'Gemelo sentado libre',      img:'apolo/img/maquinas/gemelo_2.webp' },
     { cat:'PIERNA',     name:'Plataforma de sentadilla',  img:null },
 
     // PECHO
