@@ -4,6 +4,7 @@ function ActividadesPage() {
   return (
     <div className="page">
       <Nav linkPrefix="index.html" activeHash="#actividades" />
+      <BackButton />
       <Actividades />
       <Footer linkPrefix="index.html" />
     </div>
