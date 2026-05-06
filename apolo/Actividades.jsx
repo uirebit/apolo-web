@@ -25,6 +25,7 @@ function Actividades() {
       instructor: 'POR CONFIRMAR',
       handle: null,
       imgs: [],
+      video: 'apolo/img/salsa/video_salsa.mp4',
       desc: 'Clases para todos los niveles. Ritmo, coordinación y comunidad sin necesidad de pareja.',
       horario: ['HORARIOS EN RECEPCIÓN'],
     },
@@ -92,9 +93,11 @@ function Actividades() {
   );
 }
 
-function ActividadCard({ tag, name, instructor, handle, handleUrl, web, imgs, desc, horario }) {
+function ActividadCard({ tag, name, instructor, handle, handleUrl, web, video, imgs, desc, horario }) {
   const total = (imgs && imgs.length) || 0;
   const hasImg = total > 0;
+  const hasVideo = !!video;
+  const hasMedia = hasVideo || hasImg;
   const [idx, setIdx] = React.useState(0);
   const startX = React.useRef(0);
   const next = () => setIdx(i => (i + 1) % total);
@@ -120,14 +123,29 @@ function ActividadCard({ tag, name, instructor, handle, handleUrl, web, imgs, de
       background:'var(--bg)', border:'1px solid var(--rule)',
       display:'flex', flexDirection:'column',
     }}>
-      {/* Imagen / carrusel o bloque amarillo si no hay fotos aún */}
+      {/* Vídeo / carrusel de imágenes o bloque naranja si aún no hay media */}
       <div onTouchStart={hasImg ? onTouchStart : undefined} onTouchEnd={hasImg ? onTouchEnd : undefined} style={{
         aspectRatio: '4/3',
         position:'relative',
         overflow:'hidden',
-        background: hasImg ? 'var(--bg-2)' : 'var(--orange)',
+        background: hasMedia ? 'var(--bg-2)' : 'var(--orange)',
       }}>
-        {hasImg && imgs.map((src, i) => (
+        {hasVideo && (
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            style={{
+              position:'absolute', inset: 0,
+              width:'100%', height:'100%',
+              objectFit:'cover',
+            }}
+          />
+        )}
+        {!hasVideo && hasImg && imgs.map((src, i) => (
           <div key={src} style={{
             position:'absolute', inset: 0,
             backgroundImage:`url(${src})`,
@@ -136,7 +154,7 @@ function ActividadCard({ tag, name, instructor, handle, handleUrl, web, imgs, de
             transition:'opacity 0.5s ease',
           }} />
         ))}
-        {!hasImg && (
+        {!hasMedia && (
           <div className="anton" style={{
             position:'absolute', inset: 0,
             display:'flex', alignItems:'center', justifyContent:'center',
@@ -147,8 +165,8 @@ function ActividadCard({ tag, name, instructor, handle, handleUrl, web, imgs, de
         <span style={{
           position:'absolute', top: 16, left: 16, zIndex: 2,
           padding:'5px 9px',
-          background: hasImg ? 'var(--orange)' : 'var(--bg)',
-          color: hasImg ? 'var(--bg)' : 'var(--orange)',
+          background: hasMedia ? 'var(--orange)' : 'var(--bg)',
+          color: hasMedia ? 'var(--bg)' : 'var(--orange)',
           fontFamily:"'JetBrains Mono', monospace", fontSize: 10, letterSpacing:'0.22em', fontWeight: 700,
         }}>{tag}</span>
 
