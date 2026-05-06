@@ -109,8 +109,8 @@ function Horario() {
               Pilates con
               <span style={{ color:'var(--ink)', fontWeight: 700 }}> Laura Díaz</span>:
               L y X 17—21 H · M y J 09—13 / 17—21 H · plazas extra L y V 10—13 H ·
-              embarazadas M y J a las 12 H. Body Combat, Salsa y otras: horarios en
-              <a href="#actividades" style={{ color:'var(--orange)', fontWeight: 700, marginLeft: 4 }}>recepción</a>.
+              embarazadas M y J a las 12 H. Salsa y Pole Dance: horarios en
+              <a href="actividades.html" style={{ color:'var(--orange)', fontWeight: 700, marginLeft: 4 }}>actividades</a>.
             </div>
           </div>
         </div>
