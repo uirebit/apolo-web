@@ -8,7 +8,7 @@ function Planes() {
       price:'7',
       period:'/DÍA',
       desc:'Una visita suelta. Para probar el sitio sin compromiso.',
-      features:['Acceso completo a las tres naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
+      features:['Acceso completo a las tres naves','Vestuarios','Sin matrícula','Sin permanencia'],
     },
     {
       tag:'02',
@@ -16,7 +16,7 @@ function Planes() {
       price:'30',
       period:'/2 SEMANAS',
       desc:'Catorce días seguidos. Para una temporada concreta.',
-      features:['Acceso completo a las tres naves','Vestuarios + sauna','14 días naturales','Sin matrícula'],
+      features:['Acceso completo a las tres naves','Vestuarios','14 días naturales','Sin matrícula'],
     },
     {
       tag:'03',
@@ -24,7 +24,7 @@ function Planes() {
       price:'50',
       period:'/MES',
       desc:'Mes completo. La cuota habitual de los socios.',
-      features:['Acceso completo a las tres naves','Vestuarios + sauna','Sin matrícula','Sin permanencia'],
+      features:['Acceso completo a las tres naves','Vestuarios','Sin matrícula','Sin permanencia'],
       hi: true,
     },
   ];
