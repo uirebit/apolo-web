@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8" />
-<title>The Apolo Gym</title>
+<title>Actividades — The Apolo Gym</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/webp" href="apolo/img/logo-real-clean.webp" />
 <link rel="apple-touch-icon" href="apolo/img/logo-real-clean.webp" />
@@ -40,102 +40,33 @@
 
   .page { width: 1440px; margin: 0 auto; }
 
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-  .marquee-track {
-    display: flex; gap: 48px; white-space: nowrap;
-    animation: marquee 40s linear infinite;
-    padding-right: 48px;
-  }
-
-  /* ─────────────── RESPONSIVE ─────────────── */
-
-  /* Page becomes fluid below the design width */
   @media (max-width: 1440px) {
     .page { width: 100%; max-width: 1440px; }
   }
-
-  /* Catalog grid: 4 → 3 → 2 → 1 columns (used on maquinas.html) */
-  .catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  @media (max-width: 1100px) {
-    .catalog-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 768px) {
-    .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  }
-  @media (max-width: 420px) {
-    .catalog-grid { grid-template-columns: 1fr; }
-  }
-
 
   /* Mobile */
   @media (max-width: 768px) {
     html { scroll-padding-top: 72px; }
 
-    /* Header: tighter padding, hide the 8-link menu and logo subtext */
     .page > header { padding: 12px 16px !important; gap: 8px !important; }
     .nav-menu-desktop { display: none !important; }
     .nav-logo-sub { display: none !important; }
     .nav-cta { padding: 10px 14px !important; font-size: 10px !important; letter-spacing: 0.16em !important; }
     .nav-tel { font-size: 9px !important; }
 
-    /* Section padding */
     .page > section, .page > footer {
       padding-left: 20px !important;
       padding-right: 20px !important;
     }
-    #nosotros, #naves, #maquinas, #actividades, #planes, #horario {
+    #actividades {
       padding-top: 72px !important;
       padding-bottom: 72px !important;
     }
-    #contacto { padding-top: 56px !important; padding-bottom: 24px !important; }
 
-    /* Hero: collapse the inner grid + adjust aside */
-    #inicio > div[style*="grid-template-columns"] {
-      padding: 28px 20px 32px !important;
-      gap: 32px !important;
-      min-height: 0 !important;
-    }
-    #inicio aside {
-      border-left: none !important;
-      border-top: 1px solid var(--rule) !important;
-      padding-left: 0 !important;
-      padding-top: 28px !important;
-    }
-    .hero-greek-label { display: none !important; }
-
-    /* Stack top-level section grids to 1 col */
-    .page section > div[style*="grid-template-columns"],
-    .page footer > div[style*="grid-template-columns"] {
+    /* Stack section grids to 1 col on mobile */
+    .page section > div[style*="grid-template-columns"] {
       grid-template-columns: 1fr !important;
       gap: 32px !important;
-    }
-
-    /* Nosotros: paragraphs + achievements (4 cols → 2) */
-    #nosotros div[style*="grid-template-columns: 1fr 1fr"] {
-      grid-template-columns: 1fr !important;
-      gap: 24px !important;
-    }
-    #nosotros div[style*="repeat(4"] {
-      grid-template-columns: 1fr 1fr !important;
-    }
-
-    /* Maquinas: categories 4 cols → 2 cols */
-    #maquinas div[style*="repeat(4"] {
-      grid-template-columns: 1fr 1fr !important;
-    }
-
-    /* Naves address strip: stack vertically */
-    #naves > div[style*="space-between"][style*="border:"] {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 10px !important;
     }
 
     /* Footer 4-col block → stacked */
@@ -143,11 +74,8 @@
       grid-template-columns: 1fr !important;
       gap: 32px !important;
     }
-    /* Footer logo scales with viewport */
     #contacto img { width: clamp(64px, 18vw, 140px) !important; height: clamp(64px, 18vw, 140px) !important; }
-
-    /* Marquee: smaller text */
-    .marquee-track > .anton { font-size: 22px !important; }
+    #contacto { padding-top: 56px !important; padding-bottom: 24px !important; }
   }
 </style>
 </head>
@@ -161,17 +89,9 @@
 
 <script type="text/babel" src="apolo/Logo.jsx"></script>
 <script type="text/babel" src="apolo/Nav.jsx"></script>
-<script type="text/babel" src="apolo/Hero.jsx"></script>
-<script type="text/babel" src="apolo/Marquee.jsx"></script>
-<script type="text/babel" src="apolo/Manifiesto.jsx"></script>
-<script type="text/babel" src="apolo/Nosotros.jsx"></script>
-<script type="text/babel" src="apolo/Naves.jsx"></script>
-<script type="text/babel" src="apolo/Maquinas.jsx"></script>
-<script type="text/babel" src="apolo/ActividadesTeaser.jsx"></script>
-<script type="text/babel" src="apolo/Planes.jsx"></script>
-<script type="text/babel" src="apolo/Horario.jsx"></script>
 <script type="text/babel" src="apolo/Footer.jsx"></script>
-<script type="text/babel" src="apolo/Landing.jsx"></script>
+<script type="text/babel" src="apolo/Actividades.jsx"></script>
+<script type="text/babel" src="apolo/ActividadesApp.jsx"></script>
 
 </body>
 </html>

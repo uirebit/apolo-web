@@ -10,7 +10,7 @@ function ApoloLanding() {
       <Nosotros />
       <Naves />
       <Maquinas />
-      <Actividades />
+      <ActividadesTeaser />
       <Planes />
       <Horario />
       <Footer />
