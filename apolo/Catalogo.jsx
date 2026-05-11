@@ -21,14 +21,17 @@ function Catalogo() {
     { cat:'PIERNA',     name:'Hack squat inclinada',      img:'apolo/img/maquinas/pierna_hack_inclinada.webp' },
     { cat:'PIERNA',     name:'Prensa 45º',                img:null },
     { cat:'PIERNA',     name:'Prensa horizontal',         img:'apolo/img/maquinas/pierna_prensa_horizontal.webp' },
+    { cat:'PIERNA',     name:'Prensa de pierna sentada',  img:'apolo/img/maquinas/press_pierna.webp' },
+    { cat:'PIERNA',     name:'Prensa vertical',           img:'apolo/img/maquinas/press_pierna_tumbado.webp' },
     { cat:'PIERNA',     name:'Leg curl tumbado',          img:null },
     { cat:'PIERNA',     name:'Leg curl sentado',          img:null },
     { cat:'PIERNA',     name:'Leg extension',             img:null },
-    { cat:'PIERNA',     name:'Aductor / abductor',        img:null },
+    { cat:'PIERNA',     name:'Aductor / abductor',        img:'apolo/img/maquinas/culo_lateral.webp' },
     { cat:'PIERNA',     name:'Gemelo de pie',             img:'apolo/img/maquinas/gemelo_1.webp' },
     { cat:'PIERNA',     name:'Gemelo sentado Nautilus',   img:'apolo/img/maquinas/gemelo_3.webp' },
     { cat:'PIERNA',     name:'Gemelo sentado libre',      img:'apolo/img/maquinas/gemelo_2.webp' },
     { cat:'PIERNA',     name:'Plataforma de sentadilla',  img:'apolo/img/maquinas/pierna_plataforma.webp' },
+    { cat:'PIERNA',     name:'Torre de sentadillas',      img:'apolo/img/maquinas/torre_sentadillas.webp' },
 
     // PECHO
     { cat:'PECHO',      name:'Pec deck',                  img:null },
